@@ -7,6 +7,7 @@ IF %ERRORLEVEL% EQU 0 (
 ) ELSE (
     ECHO Please run this script as administrator. If you didn't know how to run it, then right click then Run as Administrator.
     pause
+    exit
 )
 
 :start
