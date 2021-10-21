@@ -16,7 +16,7 @@ echo Can't find the URL? See https://github.com/weareblahs/wsa-auto-install#how-
 set /P url=Enter the URL here:
 
 echo Starting download...
-:: Change the line below to use a different installer. See https://github.com/weareblahs/wsa-auto-install#how-this-works---a-teardown.
+:: Change the line below to use a different installer. See https://github.com/weareblahs/wsa-auto-install[hash]how-this-works---a-teardown.
 aria2c -x 16 -s 16 -o wsa_installation.msix "%url%" 
 
 echo Starting installation...
