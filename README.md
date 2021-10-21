@@ -21,7 +21,7 @@ This uses `PowerShell` to add (install) the downloaded package to the computer.
 This script checks if you've "runned as admin" by default so the installation can be more easier.
 
 ## Prerequisites
- - Aria2 ([download here](https://github.com/aria2/aria2/releases/tag/release-1.36.0) and extract the `aria2c.exe` file to the directory of this repo)
+ - Aria2 ([download here](https://github.com/aria2/aria2/releases/tag/release-1.36.0) and extract the `aria2c.exe` file to the directory where `wsa.bat` is located)
  - Windows 11 PC
  
 ## How to use?
