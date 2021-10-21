@@ -12,7 +12,7 @@ IF %ERRORLEVEL% EQU 0 (
 :start
 echo Windows Subsystem for Android installation script
 echo This script simplifies the installation of Windows Subsystem for Android and requires compatible Windows 11 computers to install it, no matter you're a Windows Insider or a normal Windows user.
-echo Can't find the URL? See https://github.com/weareblahs/wsa-auto-install#how-to-use.
+echo Can't find the URL? See https://tinyurl.com/wsa-htu.
 set /P url=Enter the URL here:
 
 echo Starting download...
