@@ -24,4 +24,5 @@ powershell Add-AppxPackage -Path wsa_installation.msix
 
 echo Installation complete!
 echo Find Windows Subsystem for Android on the Start menu.
-echo pause
+pause
+exit
