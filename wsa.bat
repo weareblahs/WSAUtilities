@@ -5,7 +5,7 @@ NET SESSION >nul 2>&1
 IF %ERRORLEVEL% EQU 0 (
     GOTO start
 ) ELSE (
-    ECHO Please run this script as administrator. If you didn't know how to run it, then right click > Run as Administrator.
+    ECHO Please run this script as administrator. If you didn't know how to run it, then right click then Run as Administrator.
     pause
 )
 
