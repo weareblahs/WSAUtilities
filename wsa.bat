@@ -1,6 +1,6 @@
 @echo off
 
-# The following lines are used to check admin access.
+:: The following lines are used to check admin access.
 NET SESSION >nul 2>&1
 IF %ERRORLEVEL% EQU 0 (
     GOTO start
@@ -9,14 +9,14 @@ IF %ERRORLEVEL% EQU 0 (
     pause
 )
 
-:start # Indicate the start of the script
+:start :: Indicate the start of the script
 echo Windows Subsystem for Android installation script
 echo This script simplifies the installation of Windows Subsystem for Android and requires compatible Windows 11 computers to install it, no matter you're a Windows Insider or a normal Windows user.
 echo Can't find the URL? See https://github.com/weareblahs/wsa-auto-install#how-to-use.
 set /P url=Enter the URL here:
 
 echo Starting download...
-aria2c -x 16 -s 16 -o wsa_installation.msix "%url%" # Change this line to use a different installer. See https://github.com/weareblahs/wsa-auto-install#how-this-works---a-teardown.
+aria2c -x 16 -s 16 -o wsa_installation.msix "%url%" :: Change this line to use a different installer. See https://github.com/weareblahs/wsa-auto-install#how-this-works---a-teardown.
 
 echo Starting installation...
 powershell Add-AppxPackage -Path wsa_installation.msix
