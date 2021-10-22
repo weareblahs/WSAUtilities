@@ -21,9 +21,10 @@ echo Starting download...
 aria2c -x 16 -s 16 -o wsa_installation.msix "%url%" 
 
 echo Starting installation...
+:: After downloading, take the renamed file to install through Powershell.
 powershell Add-AppxPackage -Path wsa_installation.msix
 
 echo Installation complete!
-echo Find Windows Subsystem for Android on the Start menu.
+echo Before you try out Windows Subsystem for Android, make sure you enable "Virtual Machine Platform" under the "Turn Windows features on or off" section.
 pause
 exit
