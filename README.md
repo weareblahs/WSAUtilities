@@ -1,5 +1,5 @@
 # Windows Subsystem for Android unofficial installer
-This script is a batch script that installs Windows Subsystem for Android that runs on Windows 11 devices.
+This script is a batch script that installs Windows Subsystem for Android that runs on Windows 11 devices. Script based on [these instructions](https://www.reddit.com/r/Windows11/comments/qc6z0w/windows_subsystem_for_android_for_dev_channel/) by Reddit user u/Coxxs.
 
 # TODO
  - Turn Windows Features On or Off in batch script
