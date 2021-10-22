@@ -12,7 +12,7 @@ This script is a batch script that installs Windows Subsystem for Android that r
 aria2c -x 16 -s 16 -o wsa_installation.msix "%url%"
 ```
 This uses `aria2c` to download the WSA URL the user provided in 16 connections, which accerlates the download. The URL provided by the user is stored on a variable.
-Want to change to your preferred downloader? Then change the command to `curl -o wsa_installation.msix "%url%"` or `wget -O wsa_installation.msix "%url%"`. Use your own command? then make sure the URL part is set to `%url%` and that's all.
+Want to change to your preferred downloader? Then change the command to `curl -o wsa_installation.msix "%url%"` or `wget -O wsa_installation.msix "%url%"`. Use your own command? then make sure the URL part is set to `%url%` and that's all. Put quotes before and after the URL (example: `"%url%"`) if you want to do that.
 ```powershell
 powershell Add-AppxPackage -Path wsa_installation.msix
 ```
