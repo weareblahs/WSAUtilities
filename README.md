@@ -34,12 +34,12 @@ This script checks if you've "runned as admin" by default so the installation ca
 3. Right click > Copy Link Address
 4. Run the script as administrator (Right click > Run as Administrator) then paste the URL, then press Enter and let it do the rest.
 ### Before you start testing - IMPORTANT
-4.1. Press the Windows Key / go to Start then search for "turn windows features on or off".
+4.1. Press the Windows Key / go to Start then search for "turn windows features on or off".  
 ![image](https://user-images.githubusercontent.com/37889443/138376436-d0a37366-714d-4471-9907-f81cc3093d9e.png)
-4.2. At the pop-up, enable "Virtual Machine Platform".
+4.2. At the pop-up, enable "Virtual Machine Platform".  
 ![image](https://user-images.githubusercontent.com/37889443/138376531-8a53715d-cb23-481f-a899-74808bfc78a5.png)
-4.3. Go back to Command Prompt and press any key to exit the installation script. Then, go back to the "Turn Windows features on or off" window.
-4.4. Follow the instructions on your computer to restart your computer. Remember to save your files on your PC.
+4.3. Go back to Command Prompt and press any key to exit the installation script. Then, go back to the "Turn Windows features on or off" window.  
+4.4. Follow the instructions on your computer to restart your computer. Remember to save your files on your PC.  
 5. After restart, go to Start > Windows Subsystem for Android™ to configure settings for Windows Subsystem for Android.
 
 ## Wait, how to download apps?
