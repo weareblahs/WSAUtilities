@@ -4,7 +4,7 @@ This script is a batch script that installs Windows Subsystem for Android that r
 # TODO
  - Turn Windows Features On or Off in batch script
  - curl: https://store.rg-adguard.net/api/GetFiles (POST?) and get MSIX URL. Currently guiding users who uses this script to copy the link from https://store.rg-adguard.net/.
-   - TIP: Use Inspect Element to find out how to get the source stuffs. All encoded in HTML.
+   - Using a mirror could work on this case?
    
 # How this works - a teardown
 ```batch
