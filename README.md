@@ -53,6 +53,11 @@ Here's how to use it:
 
 Future releases will include OBB extraction and installation.
 
+## Screenshot / ScreenshotDT
+Screenshot through ADB for Windows Subsystem for Android apps. DRM-protected contents will show as black screen.
+
+**ScreenshotDT**: Same as `Screenshot` but outputs date and time (Default format in batch file: DDMMYYYY HHMMSS. You can change it.)
+
 ## TODO: Fixes and Improvements
  - Turn Windows Features On or Off in batch script (WSAInstall)
  - curl: https://store.rg-adguard.net/api/GetFiles (POST?) and get MSIX URL. Currently guiding users who uses this script to copy the link from https://store.rg-adguard.net/. (WSAInstall)
