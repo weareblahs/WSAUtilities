@@ -33,5 +33,5 @@ This script installs APK files through ADB (`platform-tools` to be specific) wit
 ## TODO: Fixes and Improvements
  - Turn Windows Features On or Off in batch script (WSAInstall)
  - curl: https://store.rg-adguard.net/api/GetFiles (POST?) and get MSIX URL. Currently guiding users who uses this script to copy the link from https://store.rg-adguard.net/. (WSAInstall)
-   - Using a mirror on Google Drive / s-ul.eu could work on this case?
+   - ~~Using a mirror on Google Drive / s-ul.eu could work on this case?~~ Mirror option added
  - Check if using Windows 11. Accepting versions starting `22*.*` (WSAInstall)
