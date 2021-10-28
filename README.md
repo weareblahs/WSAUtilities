@@ -47,3 +47,4 @@ Here's how to use it:
  - curl: https://store.rg-adguard.net/api/GetFiles (POST?) and get MSIX URL. Currently guiding users who uses this script to copy the link from https://store.rg-adguard.net/. (WSAInstall)
    - ~~Using a mirror on Google Drive / s-ul.eu could work on this case?~~ Mirror option added
  - Check if using Windows 11. Accepting versions starting `22*.*` (WSAInstall)
+ - XAPK Installation (New script: InstallXAPK)
