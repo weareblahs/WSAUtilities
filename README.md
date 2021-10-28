@@ -1,4 +1,4 @@
-# wsatools
+# WSAtools
 Tools for Windows Subsystem for Android™ that only uses batch scripts and command line-based softwares.
 
 ## Requirements
