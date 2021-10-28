@@ -1,6 +1,10 @@
 # wsatools
 Tools for Windows Subsystem for Android™ that only uses batch scripts and command line-based softwares.
 
+## Requirements
+ - Windows 11 computer (of course)
+ - Processor with Virtualization support
+ - Basic requirements of Windows 11 PC ([here](https://www.microsoft.com/en-us/windows/windows-11-specifications#table2))
 ## Download
 See https://github.com/weareblahs/wsatools/releases.
 
