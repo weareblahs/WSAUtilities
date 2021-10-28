@@ -22,6 +22,11 @@ Saw "Enter the URL here" and don't know what to do? Here's how to get it:
 3. Find the `.msixbundle file`, right click, then "Copy link address".
 4. Paste it at the command window.
 
+### How to fix the "Virtual Machine Platform" error?
+1. Go to "Search" (or keyboard shortcut Win+S), then type in "Turn Windows Features On or Off".
+2. Find "Virtual Machine Platform" and enable it.
+3. Restart your computer.
+
 ## InstallWSAMirror
 Installs Windows Subsystem for Android from a OneDrive mirror hosted by me. Please note that this mirror may exceed OneDrive's download quota.  
   
