@@ -7,6 +7,17 @@ See https://github.com/weareblahs/wsatools/releases.
 ## InstallWSA
 This script is a batch script that installs Windows Subsystem for Android that runs on Windows 11 devices. Script based on [these instructions](https://www.reddit.com/r/Windows11/comments/qc6z0w/windows_subsystem_for_android_for_dev_channel/) by Reddit user u/Coxxs.
 
+Saw "Enter the URL here" and don't know what to do? Here's how to get it:
+1. Go to https://store.rg-adguard.net/
+2. Enter these parameters:
+
+| URL                                                    | Channel |
+|--------------------------------------------------------|---------|
+| https://www.microsoft.com/store/productId/9P3395VX91NR | Slow    |
+
+3. Find the `.msixbundle file`, right click, then "Copy link address".
+4. Paste it at the command window.
+
 ## InstallAPK
 This script installs APK files through ADB (`platform-tools` to be specific) with a wizard-like interface. You need to drag and drop the APK to the command prompt window.
 
