@@ -30,6 +30,13 @@ Version on my cloud drive: `1.7.32815.0 (28/10/2021)`
 ## InstallAPK
 This script installs APK files through ADB (`platform-tools` to be specific) with a wizard-like interface. You need to drag and drop the APK to the command prompt window.
 
+Here's how to use it:
+1. Run Windows Subsystem for Android™, then click "Files". This triggers ADB to be active. Then, turn on "Developer mode". on the Windows Subsystem for Android window.
+2. Drag and drop the APK file to the command prompt window.
+3. Press "Enter".
+4. Let it install.
+5. If you want to install another APK, type "Yes" then press "Enter".
+
 ## TODO: Fixes and Improvements
  - Turn Windows Features On or Off in batch script (WSAInstall)
  - curl: https://store.rg-adguard.net/api/GetFiles (POST?) and get MSIX URL. Currently guiding users who uses this script to copy the link from https://store.rg-adguard.net/. (WSAInstall)
