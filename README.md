@@ -22,6 +22,11 @@ Saw "Enter the URL here" and don't know what to do? Here's how to get it:
 3. Find the `.msixbundle file`, right click, then "Copy link address".
 4. Paste it at the command window.
 
+## InstallWSAMirror
+Installs Windows Subsystem for Android from a OneDrive mirror hosted by me. Please note that this mirror may exceed OneDrive's download quota.  
+  
+Version on my cloud drive: `1.7.32815.0 (28/10/2021)`
+
 ## InstallAPK
 This script installs APK files through ADB (`platform-tools` to be specific) with a wizard-like interface. You need to drag and drop the APK to the command prompt window.
 
