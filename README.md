@@ -64,3 +64,4 @@ Screenshot through ADB for Windows Subsystem for Android apps. DRM-protected con
    - ~~Using a mirror on Google Drive / s-ul.eu could work on this case?~~ Mirror option added (WSAMirror)
  - Check if using Windows 11. Accepting versions starting `22*.*` (WSAInstall)
  - ~~XAPK Installation (New script: InstallXAPK)~~ Done, see beta v0.0.3
+ - Screenshot does not work at this moment as it returns white screen on output PNG file (Screenshot / ScreenshotDT)
