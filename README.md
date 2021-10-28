@@ -42,9 +42,20 @@ Here's how to use it:
 4. Let it install.
 5. If you want to install another APK, type "Yes" then press "Enter".
 
+## InstallXAPK
+This script installs XAPK (base + language files) with a wizard-like interface. You need to drag and drop the XAPK file to the command prompt window. The script didn't support XAPKs with OBBs at this moment.
+
+Here's how to use it:
+1. Run Windows Subsystem for Android™, then click "Files". This triggers ADB to be active. Then, turn on "Developer mode". on the Windows Subsystem for Android window.
+2. Drag and drop the APK file to the command prompt window.
+3. Press "Enter".
+4. Let it install.
+
+Future releases will include OBB extraction and installation.
+
 ## TODO: Fixes and Improvements
  - Turn Windows Features On or Off in batch script (WSAInstall)
  - curl: https://store.rg-adguard.net/api/GetFiles (POST?) and get MSIX URL. Currently guiding users who uses this script to copy the link from https://store.rg-adguard.net/. (WSAInstall)
    - ~~Using a mirror on Google Drive / s-ul.eu could work on this case?~~ Mirror option added (WSAMirror)
  - Check if using Windows 11. Accepting versions starting `22*.*` (WSAInstall)
- - XAPK Installation (New script: InstallXAPK)
+ - ~~XAPK Installation (New script: InstallXAPK)~~ Done, see beta v0.0.3
