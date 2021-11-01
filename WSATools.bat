@@ -1,6 +1,6 @@
 @echo off
 
-echo WSATools v0.0.5 "A Full Commitments What I'm Thinking Of"
+echo WSATools v0.0.6 "You Wouldn't Get This From Any Other Guy"
 echo.
 echo.
 echo Select what you want to do:
@@ -25,17 +25,14 @@ if %var%== 6 GOTO checkupdate
 if not %var%== GOTO exit
 :installwsa
 cls
-cd main
 InstallWSA
 
 :installwsa
 cls
-cd main
 InstallWSAMirror
 
 :installapk
 cls
-cd main
 InstallAPK
 
 :exit
@@ -43,7 +40,6 @@ exit
 
 :installxapk
 cls
-cd main
 installXAPK
 
 :prescreenshot
@@ -51,10 +47,9 @@ cls
 echo [1]: PNG, Custom filename
 echo [2]: PNG, Date and Time
 set /p var2=Select output type:
-if %var2%== 1 cls && cd main && Screenshot
-if %var2%== 2 cls && cd main && ScreenshotDT
+if %var2%== 1 cls && Screenshot
+if %var2%== 2 cls && ScreenshotDT
 
 :checkupdate
 cls
-cd main
 UpdateWSA.bat
