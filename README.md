@@ -25,6 +25,11 @@ Saw "Enter the URL here" and don't know what to do? Here's how to get it:
 3. Find the `.msixbundle file`, right click, then "Copy link address".
 4. Paste it at the command window.
 
+### For your information
+For verification of checksum of the file to ensure that you downloaded the `.msixbundle` file correctly, the SHA256 checksum of version `1.7.32815.0` is `ee2e71e844a491c4f0ff371bfa641447bc036ad3b7a57a319cc6673b97c345c4`. You can check it by right-clicking the downloaded file and select `CRC SHA` then select `SHA256` then compare it.  
+  
+Currently planning to add hash verification using hashsum.bat.
+
 ### How to fix the "Virtual Machine Platform" error?
 1. Go to "Search" (or keyboard shortcut Win+S), then type in "Turn Windows Features On or Off".
 2. Find "Virtual Machine Platform" and enable it.
