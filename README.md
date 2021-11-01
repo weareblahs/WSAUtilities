@@ -6,7 +6,7 @@ Other tools to add into this collection of WSATools? Then contact me through my 
 
 ## Requirements
  - Windows 11 computer (of course)
-   - Script only runs if you're using Windows 11 version 22000.282. You can check your build number by `Win+R` then type `winver`. See image below if you still didn't know where's the build number:
+   - Script only runs if you're using Windows 11 version 22000.282. You can check your build number by `Win+R` then type `winver`. See image below if you still didn't know where's the build number:  
    ![image](https://user-images.githubusercontent.com/37889443/139691468-683cc9d7-38fc-4532-9f4b-cd2ac5c9c73f.png)
 
      
