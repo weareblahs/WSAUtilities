@@ -8,10 +8,9 @@ Other tools to add into this collection of WSATools? Then contact me through my 
  - Windows 11 computer (of course)
    - Script only runs if you're using Windows 11 version 22000.282. You can check your build number by `Win+R` then type `winver`. See image below if you still didn't know where's the build number:  
    ![image](https://user-images.githubusercontent.com/37889443/139691468-683cc9d7-38fc-4532-9f4b-cd2ac5c9c73f.png)
-
-     
  - Processor with Virtualization support
- - Basic requirements of Windows 11 PC ([here](https://www.microsoft.com/en-us/windows/windows-11-specifications#table2))
+   - This is a basic requirement of emulating some Linux-based OSes. If you used Bluestacks / Nox or other Android emulator before, you probably turned it on before.
+ - Basic requirements of Windows Subsystem for Android ([here](https://www.microsoft.com/en-us/windows/windows-11-specifications#table2))
 ## Download
 See https://github.com/weareblahs/wsatools/releases.
 
