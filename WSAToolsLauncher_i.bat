@@ -18,18 +18,6 @@ if %check% == 10.0.22000.282 (
 :: Success screen
   cls
   echo Windows version up-to-date, which means it supports Windows Subsystem for Android. 
-  echo Launching in 3 seconds...
-  timeout 1 > NUL
-  cls
-  echo Windows version up-to-date, which means it supports Windows Subsystem for Android. 
-  echo Launching in 2 seconds...
-  timeout 1 > NUL
-  cls
-  echo Windows version up-to-date, which means it supports Windows Subsystem for Android. 
-  echo Launching in 1 seconds...
-  timeout 1 > NUL
-  del checkver.bat
-  cls
   cd main
   WSATools
   pause >nul
