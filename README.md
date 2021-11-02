@@ -2,7 +2,7 @@
 Tools for Windows Subsystem for Android™ that only uses batch scripts and command line-based softwares.
 
 ### Looking for tools to add!
-Other tools to add into this collection of WSATools? Then contact me through my email - it's on my user page (https://github.com/weareblahs).
+Other tools to add into this collection of WSATools? Then sumbit an issue with the tag "New Feature".
 
 ## Requirements
  - Windows 11 computer (of course)
