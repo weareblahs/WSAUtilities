@@ -79,3 +79,4 @@ Checks for updates of Windows Subsystem for Android.
  - Check if using Windows 11. Accepting versions starting `22*.*` (WSAInstall)
  - ~~XAPK Installation (New script: InstallXAPK)~~ Done, see beta v0.0.3
  - Screenshot does not work at this moment as it returns white screen on output PNG file (Screenshot / ScreenshotDT)
+ - Multilanguage
