@@ -76,7 +76,7 @@ Checks for updates of Windows Subsystem for Android.
  - Turn Windows Features On or Off in batch script (WSAInstall)
  - curl: https://store.rg-adguard.net/api/GetFiles (POST?) and get MSIX URL. Currently guiding users who uses this script to copy the link from https://store.rg-adguard.net/. (WSAInstall)
    - ~~Using a mirror on Google Drive / s-ul.eu could work on this case?~~ Mirror option added (WSAMirror)
- - ~Check if using Windows 11. Accepting versions starting `22*.*`~ See v0.0.6. Added checks before running WSATools as launcher. See [here](https://dev.to/weareblahs/i-found-it-the-most-complex-way-to-check-operating-system-build-number-before-running-an-batch-script-1cmc) for explaination.(WSAInstall)
- - ~~XAPK Installation (New script: InstallXAPK)~~ Done, see beta v0.0.3
+ - ~Check if using Windows 11. Accepting versions starting `22*.*`~ See v0.0.6. Added checks before running WSATools as launcher. See [here](https://dev.to/weareblahs/i-found-it-the-most-complex-way-to-check-operating-system-build-number-before-running-an-batch-script-1cmc) for explaination. (WSAToolsLauncher)
+ - ~~XAPK Installation~~ See v0.0.3 for initial version. (InstallXAPK)
  - Screenshot does not work at this moment as it returns white screen on output PNG file (Screenshot / ScreenshotDT)
  - Multilanguage
