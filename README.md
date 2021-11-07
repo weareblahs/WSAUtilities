@@ -69,7 +69,7 @@ Here's how to use it:
 Future releases will include OBB extraction and installation.
 
 ## Screenshot / ScreenshotDT
-Screenshot through ADB for Windows Subsystem for Android apps. DRM-protected contents will show as black screen.
+Screenshot through ADB for Windows Subsystem for Android apps. DRM-protected contents will show as black screen like other normal Android devices.
 
 **ScreenshotDT**: Same as `Screenshot` but outputs date and time (Default format in batch file: DDMMYYYY HHMMSS. You can change it.)
 
