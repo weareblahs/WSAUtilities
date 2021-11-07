@@ -16,7 +16,8 @@ GOTO apk_install
 set /P apk=Drag and drop your XAPK bundle here / type in the path here then press "Enter":
 
 :: Extract XAPK to temp dir and create batch file
-7z e "%apk%" -otemp
+echo Extracting APK file...
+7z e "%apk%" -otemp  >nul
 
 :: Delete icon and manifest, then create batch
 cd temp
@@ -26,17 +27,19 @@ cd temp
 dir /b > temp.bat
 
 :: Create batch (2) - Replace stuffs
-fart "temp.bat" "com." "adb install "com."
-fart "temp.bat" "config" "adb install config"
-fart -C "temp.bat" temp.bat "  "
+fart "temp.bat" "com." "adb install "com." >nul
+fart "temp.bat" "config" "adb install config" >nul
+fart -C "temp.bat" temp.bat "  " >nul
 
 :: Extract adb from zip archive
+echo Extracting ADB to temp directory...
 cd ..
-7z e adb.zip -otemp
+7z e adb.zip -otemp >nul
 
 :: Run final generated ADB script
 cd temp
-adb connect localhost:58526
+adb connect localhost:58526 >nul
+echo Installing...
 temp.bat
 
 echo Installation complete!

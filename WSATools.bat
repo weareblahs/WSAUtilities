@@ -1,6 +1,6 @@
 @echo off
 
-echo WSATools v0.0.6 "You Wouldn't Get This From Any Other Guy"
+echo WSATools v0.0.7 "I Just Wanna Tell You How I'm Feeling"
 echo.
 echo.
 echo Select what you want to do:

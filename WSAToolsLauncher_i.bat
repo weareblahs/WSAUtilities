@@ -5,14 +5,14 @@ echo Windows Subsystem for Android requires the latest version of Windows 11. Pl
 del checkver.bat
 :: Move ver content to text file
 ver >> checkver.bat
-:: Replace terms, making the batch file return "echo (version)"
-main\fart checkver.bat "Microsoft Windows [Version" " "
-main\fart checkver.bat "]" " "
-main\fart -C checkver.bat \r\n " "
-main\fart -C checkver.bat "   " "@echo off \r\n echo "
-main\fart checkver.bat "  " " "
-main\fart -C checkver.bat ".282 " ".282\r\n"
-main\fart checkver.bat " echo " "echo "
+:: Replace terms, making the batch file return "echo (version)" >nul
+main\fart checkver.bat "Microsoft Windows [Version" " " >nul
+main\fart checkver.bat "]" " " >nul
+main\fart -C checkver.bat \r\n " " >nul
+main\fart -C checkver.bat "   " "@echo off \r\n echo " >nul
+main\fart checkver.bat "  " " " >nul
+main\fart -C checkver.bat ".282 " ".282\r\n" >nul
+main\fart checkver.bat " echo " "echo " >nul
 for /f %%N in ('checkver') do set "check=%%N"
 if %check% == 10.0.22000.282 (
 :: Success screen
