@@ -80,3 +80,4 @@ Checks for updates of Windows Subsystem for Android.
  - ~~XAPK Installation~~ See v0.0.3 for initial version. (InstallXAPK)
  - Screenshot does not work at this moment as it returns white screen on output PNG file (Screenshot / ScreenshotDT)
  - Multilanguage
+ - Installation falied for other packages other than the main one (InstallXAPK)
