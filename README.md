@@ -86,3 +86,4 @@ Checks for updates of Windows Subsystem for Android.
  - Screenshot does not work at this moment as it returns white screen on output PNG file (Screenshot / ScreenshotDT)
  - Multilanguage
  - Installation falied for other packages other than the main one (InstallXAPK)
+ - Install Aurora + Microsoft Launcher post-install (InstallWSA / InstallWSAMirror / Standalone Script)
