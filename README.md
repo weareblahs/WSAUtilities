@@ -1,6 +1,10 @@
 # WSAtools
 Tools for Windows Subsystem for Android™ that only uses batch scripts and command line-based softwares.
 
+## Before you use
+If you're looking for a GUI app installer for WSA, this isn't the WSAtools you're looking for. You might be looking for Simone Franco's WSATools, and this just shares the same name of it, and I just noticed just now when doing a random search with Google. I'm not affliated with that project.  
+  
+Download the WSATools you're searching for at https://www.microsoft.com/en-us/p/wsatools/9n4p75dxl6fg.
 ### Looking for tools to add!
 Other tools to add into this collection of WSATools? Then sumbit an issue with the tag "New Feature".
 
