@@ -2,8 +2,11 @@
 
 echo Windows Subsystem for Android app installer
 echo This script uses adb and simplifies installation for APK files on WSA.
-echo Before you start, please ensure that a Android app is open in WSA, such as Amazon Appstore, and also go to "Windows Subsystem for Android" on the start menu and then toggle "Developer Mode" on.
+echo Before you start, please ensure that you toggled "Developer Mode" on in WSA settings.
 echo Done? then press any key to continue the process.
+
+:: Pre-installation - restarting WSA
+WsaClient.exe /restart
 
 :: The following line hides "Press any key to continue" and didn't show text for the process.
 pause >nul

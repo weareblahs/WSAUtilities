@@ -2,9 +2,12 @@
 
 echo Windows Subsystem for Android XAPK app installer
 echo This script uses adb and simplifies installation for XAPK bundles on WSA.
-echo Before you start, please ensure that a Android app is open in WSA, such as Amazon Appstore, and also go to "Windows Subsystem for Android" on the start menu and then toggle "Developer Mode" on.
+echo Before you start, please ensure that you toggled "Developer Mode" on in WSA settings.
 echo Please note that OBB files are not supported by this script at the moment. After installation, the script will exit by itself.
 echo Done? then press any key to continue the process.
+
+:: Pre-installation - restarting WSA
+WsaClient.exe /restart
 
 :: The following line hides "Press any key to continue" and didn't show text for the process.
 pause >nul
