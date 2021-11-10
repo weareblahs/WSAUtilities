@@ -45,7 +45,7 @@ Currently planning to add hash verification using hashsum.bat.
 ## InstallWSAMirror
 Installs Windows Subsystem for Android from a OneDrive mirror hosted by me. Please note that this mirror may exceed OneDrive's download quota.  
   
-Version on my cloud drive: `1.7.32815.0 (28/10/2021)`
+Version on my cloud drive: `1.2.32822.0 (9/11/2021)`
 
 ## InstallAPK
 This script installs APK files through ADB (`platform-tools` to be specific) with a wizard-like interface. You need to drag and drop the APK to the command prompt window.
