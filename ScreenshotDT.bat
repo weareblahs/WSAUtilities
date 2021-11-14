@@ -20,8 +20,8 @@ goto end
 :end
 echo Screenshot capture complete!
 set /p var=Do you want to take another screenshot? [Yes (Y) / No (N) / Without output prompt (W)]: 
-if %var%== Yes GOTO start
-if %var%== yes GOTO start
-if %var%== Y GOTO start
-if %var%== W GOTO prestart
+if %var%== Yes goto start
+if %var%== yes goto start
+if %var%== Y goto start
+if %var%== W goto prestart
 if not %var%== No exit

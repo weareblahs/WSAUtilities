@@ -20,8 +20,11 @@ set /P apk=Drag and drop your APK file here / type in the path here then press "
 :: Connect to ADB. If you want to change it to your ADB address, then change it here.
 adb connect localhost:58526
 
+:: Copy file to main dir
+copy %apk base.apk
+
 :: Start Install
-adb install "%apk"
+adb install base.apk
 
 :: Complete prompt
 echo Installation complete!

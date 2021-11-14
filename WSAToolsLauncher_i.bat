@@ -11,10 +11,10 @@ main\fart checkver.bat "]" " " >nul
 main\fart -C checkver.bat \r\n " " >nul
 main\fart -C checkver.bat "   " "@echo off \r\n echo " >nul
 main\fart checkver.bat "  " " " >nul
-main\fart -C checkver.bat ".318 " ".318\r\n" >nul
+main\fart -C checkver.bat ".346 " ".346\r\n" >nul
 main\fart checkver.bat " echo " "echo " >nul
 for /f %%N in ('checkver') do set "check=%%N"
-if %check% == 10.0.22000.318 (
+if %check% == 10.0.22000.346 (
 :: Success screen
   cls
   echo Windows version up-to-date, which means it supports Windows Subsystem for Android. 
@@ -25,7 +25,9 @@ if %check% == 10.0.22000.318 (
 :: Failed screen
   cls
   echo Windows version not supported for Windows Subsystem for Android.
-  echo Your current Windows build is %check% meanwhile WSATools needs build 10.0.22000.318.
+  echo Your current Windows build is %check% meanwhile WSATools needs build 10.0.22000.346.
+  echo Please check for Windows updates, update it and try again. This detection script detects for
+  echo the newest build of Windows 11.
   echo Press any key to exit.
   del checkver.bat
   pause >nul

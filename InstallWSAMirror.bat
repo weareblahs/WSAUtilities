@@ -17,7 +17,7 @@ echo This might take 1.2GB of your storage space. Data charges apply.
 echo pause
 echo Starting download...
 :: Change the line below to use a different installer. See https://github.com/weareblahs/wsa-auto-install[hash]how-this-works---a-teardown.
-aria2c -x 16 -s 16 -o wsa_installation.msixbundle "https://api.onedrive.com/v1.0/shares/u!aHR0cHM6Ly8xZHJ2Lm1zL3UvcyFBbFUxUzJPMlNvMmtxVGJNSEF4cGpnQmtDcHZaP2U9TWNsU2xa/root/content" 
+aria2c -x 16 -s 16 -o wsa_installation.msixbundle "https://api.onedrive.com/v1.0/shares/u!aHR0cHM6Ly8xZHJ2Lm1zL3UvcyFBbFUxUzJPMlNvMmtxVFMzRWxlenljN3hhbXBUP2U9Mkx0SHh4/root/content" 
 
 echo Starting installation...
 powershell Add-AppxPackage -Path wsa_installation.msixbundle
