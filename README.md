@@ -2,8 +2,8 @@
 Tools for Windows Subsystem for Android™ that only uses batch scripts and command line-based softwares.
 
 # Needs improvement!
-Do you think I should do a WSAtools version for Insider Dev Channels? (The WSAToolsLauncher script will check for the latest insider version)
-Vote here: https://linkto.run/p/T1HT6MJB
+~~Do you think I should do a WSAtools version for Insider Dev Channels? (The WSAToolsLauncher script will check for the latest insider version) Vote here: https://linkto.run/p/T1HT6MJB~~
+After 5 days of voting, I decided to add Dev channel build checks to WSAToolsLauncher as a separate file (WSAToolsLauncher_devbuild). More information coming soon.
 ## Before you use
 If you're looking for a GUI app installer for WSA, this isn't the WSAtools you're looking for. You might be looking for Simone Franco's WSATools, and this just shares the same name of it, and I just noticed just now when doing a random search with Google. I'm not affliated with that project.  
   
@@ -13,7 +13,7 @@ Other tools to add into this collection of WSATools? Then sumbit an issue with t
 
 ## Requirements
  - Windows 11 computer (of course)
-   - Script only runs if you're using Windows 11 version 22000.282. You can check your build number by `Win+R` then type `winver`. See image below if you still didn't know where's the build number:  
+   - Script only runs if you're using Windows 11 version 22000 or above. As said, the "leaked" Win11 version (21996) won't work on this script. You can check your build number by `Win+R` then type `winver`. See image below if you still didn't know where's the build number:  
    ![image](https://user-images.githubusercontent.com/37889443/139691468-683cc9d7-38fc-4532-9f4b-cd2ac5c9c73f.png)
  - Processor with Virtualization support
    - This is a basic requirement of emulating some Linux-based OSes. If you used Bluestacks / Nox or other Android emulator before, you probably turned it on before.
