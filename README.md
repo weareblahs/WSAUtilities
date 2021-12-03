@@ -1,9 +1,12 @@
 # WSAtools
 Tools for Windows Subsystem for Android™ that only uses batch scripts and command line-based softwares.
 
-# Needs improvement!
-~~Do you think I should do a WSAtools version for Insider Dev Channels? (The WSAToolsLauncher script will check for the latest insider version) Vote here: https://linkto.run/p/T1HT6MJB~~
-After 5 days of voting, I decided to add Dev channel build checks to WSAToolsLauncher as a separate file (WSAToolsLauncher_devbuild). More information coming soon.
+# For users using dev builds of Windows 11
+1. Download [this file](https://github.com/weareblahs/WSAtools/blob/main/WSAToolsLauncher_devbuild.bat).
+2. Copy this file to the same directory where you downloaded WSAtools.
+3. Open `WSAToolsLauncher_devbuild.bat`.
+
+
 ## Before you use
 If you're looking for a GUI app installer for WSA, this isn't the WSAtools you're looking for. You might be looking for Simone Franco's WSATools, and this just shares the same name of it, and I just noticed just now when doing a random search with Google. I'm not affliated with that project.  
   
