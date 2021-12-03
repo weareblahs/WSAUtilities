@@ -1,6 +1,6 @@
 @echo off
 
-echo WSATools v0.0.8 "Gotta Make You Understand"
+echo WSATools v0.0.8b "Gotta Make You Understand"
 echo.
 echo.
 echo Select what you want to do:

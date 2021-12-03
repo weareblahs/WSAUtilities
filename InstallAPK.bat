@@ -21,6 +21,7 @@ set /P apk=Drag and drop your APK file here / type in the path here then press "
 adb connect localhost:58526
 
 :: Copy file to main dir
+cd main
 copy "%apk%" base.apk
 
 :: Start Install
