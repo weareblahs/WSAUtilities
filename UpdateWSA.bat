@@ -1,12 +1,21 @@
 @echo off
 
-echo Windows Subsystem for Android Update tool
-echo Press any key to start checking for updates.
+:: Language setup
+for /f "delims=" %%i in ('LocalVariables WSATools.ini Localization Language') do set lang=%%i >nul
+if %lang% == en (
+for /f "delims=" %%i in ('LocalVariables lang\en.ini UpdateWSA checkupdate1') do set checkupdate1=%%i >nul
+for /f "delims=" %%i in ('LocalVariables lang\en.ini UpdateWSA checkupdate2') do set checkupdate2=%%i >nul
+for /f "delims=" %%i in ('LocalVariables lang\en.ini UpdateWSA downloadupdate') do set downloadupdate=%%i >nul
+for /f "delims=" %%i in ('LocalVariables lang\en.ini UpdateWSA downloadfinish') do set downloadfinish=%%i >nul
+goto start
+)
+echo %checkupdate1%
+echo %checkupdate2%
 pause >nul
 
 :: Downloads check_update script from this repo then run it
-echo Downloading update script...
+echo %downloadupdate%
 wget -q -O check_update.bat "https://raw.githubusercontent.com/weareblahs/WSAtools/main/update_check"
-echo Download complete. Starting...
+echo %downloadfinish%
 cls
 check_update.bat

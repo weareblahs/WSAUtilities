@@ -1,25 +1,46 @@
 @echo off
+:: Import properties from INI
+for /f "delims=" %%i in ('LocalVariables WSATools.ini VersionInfo Version') do set version=%%i >nul
+for /f "delims=" %%i in ('LocalVariables WSATools.ini VersionInfo Codename') do set codename=%%i >nul
+for /f "delims=" %%i in ('LocalVariables WSATools.ini Localization Language') do set lang=%%i >nul
 
-echo WSATools v0.0.8b "Gotta Make You Understand"
+:: Start localization before starting script
+for /f "delims=" %%i in ('LocalVariables lang\%lang:~0,2%.ini WSATools SelectPrompt') do set selectprompt=%%i >nul
+for /f "delims=" %%i in ('LocalVariables lang\%lang:~0,2%.ini WSATools 1') do set s1=%%i >nul
+for /f "delims=" %%i in ('LocalVariables lang\%lang:~0,2%.ini WSATools 2') do set s2=%%i >nul
+for /f "delims=" %%i in ('LocalVariables lang\%lang:~0,2%.ini WSATools 3') do set s3=%%i >nul
+for /f "delims=" %%i in ('LocalVariables lang\%lang:~0,2%.ini WSATools 4') do set s4=%%i >nul
+for /f "delims=" %%i in ('LocalVariables lang\%lang:~0,2%.ini WSATools 5') do set s5=%%i >nul
+for /f "delims=" %%i in ('LocalVariables lang\%lang:~0,2%.ini WSATools 6') do set s6=%%i >nul
+for /f "delims=" %%i in ('LocalVariables lang\%lang:~0,2%.ini WSATools Additional') do set additional=%%i >nul
+for /f "delims=" %%i in ('LocalVariables lang\%lang:~0,2%.ini WSATools A1') do set a1=%%i >nul
+for /f "delims=" %%i in ('LocalVariables lang\%lang:~0,2%.ini WSATools A2') do set a2=%%i >nul
+for /f "delims=" %%i in ('LocalVariables lang\%lang:~0,2%.ini WSATools InstallWSATip') do set iwsatip=%%i >nul
+for /f "delims=" %%i in ('LocalVariables lang\%lang:~0,2%.ini WSATools Disclaimer') do set disc=%%i >nul
+for /f "delims=" %%i in ('LocalVariables lang\%lang:~0,2%.ini WSATools Selection') do set selvar=%%i >nul
+goto start
+
+:start
+echo WSATools %version% %codename%
 echo.
 echo.
-echo Select what you want to do:
-echo [1]: Install Windows Subsystem for Android (You might need to run this again as administrator) [InstallWSA]
-echo [2]: Install Windows Subsystem for Android (Mirror, You might need to run this again as administrator) [InstallWSAMirror]
-echo [3]: Install APK on Windows Subsystem for Android [InstallAPK]
-echo [4]: Install XAPK files downloaded from APKPure [InstallXAPK]
-echo [5]: [CURRENTLY NOT WORKING] Take screenshot from WSA Window [Screenshot / ScreenshotDT]
-echo [6]: Check for WSA updates [UpdateWSA]
+echo %selectprompt%
+echo %s1%
+echo %s2%
+echo %s3%
+echo %s4%
+echo %s5%
+echo %s6%
 echo.
-echo Additional Stuffs:
-echo [A1]: Install Aurora Store
-echo [A2]: Install Microsoft Launcher
+echo %additional%
+echo %a1%
+echo %a2%
 echo.
-echo For those who didn't know how to get the links for the installation files, select 2.
+echo %iwsatip%
 echo.
-echo Disclaimer: This tool isn't affliated with Microsoft Corporation in any kind.
+echo %disc%
 echo.
-set /p var=Please select what you want to do: 
+set /p var=%selvar%
 if %var%== 1 GOTO installwsa
 if %var%== 2 GOTO installwsam
 if %var%== 3 GOTO installapk
@@ -33,11 +54,11 @@ if %var%== a2 GOTO installlauncher
 if not %var%== GOTO exit
 :installwsa
 cls
-InstallWSA
+nircmd elevate InstallWSA
 
 :installwsa
 cls
-InstallWSAMirror
+nircmd elevate InstallWSAMirror
 
 :installapk
 cls
