@@ -15,6 +15,8 @@ TL;DR: Don't confuse my WSAtools project with the other one (WSATools). Thanks.
 Download the WSATools you (might) be searching for at https://www.microsoft.com/en-us/p/wsatools/9n4p75dxl6fg.
 ### Looking for tools to add!
 Other tools to add into this collection of WSATools? Then sumbit an issue with the tag "New Feature".
+### Translators required!
+I'm currently migrating all the build numbers / build versions / localization stuffs / options to a INF file, which lets me put multilanguage as an option. Please note that some Asian languages (Japanese / Chinese) won't be supported since there's some limitations with Command Prompt on this kind of stuffs, even running `chcp (code)` before running script.
 
 ## Requirements
  - Windows 11 computer (of course)
