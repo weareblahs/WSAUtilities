@@ -1,20 +1,14 @@
-# WSAtools
-Tools for Windows Subsystem for Android™ that only uses batch scripts and command line-based softwares.
+# WSAManager
+Tools for Windows Subsystem for Android™ that only uses batch scripts and command line-based softwares. Was WSAtools once.
 
 # For users using dev builds of Windows 11
-1. Download [this file](https://github.com/weareblahs/WSAtools/blob/main/WSAToolsLauncher_devbuild.bat).
-2. Copy this file to the same directory where you downloaded WSAtools.
-3. Open `WSAToolsLauncher_devbuild.bat`.
+The dev build batch is now on WSAUtilities releases starting 0.0.9.
 
+## Credits
+Special thanks to Simone Franco, the developer of WSATools for this new name.
 
-## Before you use
-This project is not the GUI APK installer for Windows Subsystem for Android (and maybe I'm lazy to change the name of the project itself). You might be looking for Simone Franco's WSATools ([GitHub project](https://github.com/Simizfo/WSATools) / [Windows Store link](https://www.microsoft.com/store/apps/9N4P75DXL6FG))  
-
-TL;DR: Don't confuse my WSAtools project with the other one (WSATools). Thanks.
-
-Download the WSATools you (might) be searching for at https://www.microsoft.com/en-us/p/wsatools/9n4p75dxl6fg.
 ### Looking for tools to add!
-Other tools to add into this collection of WSATools? Then sumbit an issue with the tag "New Feature".
+Other tools to add into this collection of WSAUtilities? Then sumbit an issue with the tag "New Feature".
 ### Translators required!
 I'm currently migrating all the build numbers / build versions / localization stuffs / options to a INF file, which lets me put multilanguage as an option. Please note that some Asian languages (Japanese / Chinese) won't be supported since there's some limitations with Command Prompt on this kind of stuffs, even running `chcp (code)` before running script.
 
@@ -26,7 +20,7 @@ I'm currently migrating all the build numbers / build versions / localization st
    - This is a basic requirement of emulating some Linux-based OSes. If you used Bluestacks / Nox or other Android emulator before, you probably turned it on before.
  - Basic requirements of Windows Subsystem for Android ([here](https://www.microsoft.com/en-us/windows/windows-11-specifications#table2))
 ## Download
-See https://github.com/weareblahs/wsatools/releases.
+See https://github.com/weareblahs/WSAUtilities/releases.
 
 ## InstallWSA
 This script is a batch script that installs Windows Subsystem for Android that runs on Windows 11 devices. Script based on [these instructions](https://www.reddit.com/r/Windows11/comments/qc6z0w/windows_subsystem_for_android_for_dev_channel/) by Reddit user u/Coxxs.
@@ -88,12 +82,12 @@ Checks for updates of Windows Subsystem for Android.
 
 ## TODO: Fixes and Improvements
  - ~~Turn Windows Features On or Off in batch script (WSAInstall)~~ Now uses DISM to turn it on.
- - curl: https://store.rg-adguard.net/api/GetFiles (POST?) and get MSIX URL. Currently guiding users who uses this script to copy the link from https://store.rg-adguard.net/. (WSAInstall)
+ - curl: https://store.rg-adguard.net/api/GetFiles (POST?) and get MSIX URL. Currently guiding users who uses this script to copy the link from https://store.rg-adguard.net/. (InstallWSA)
    - ~~Using a mirror on Google Drive / s-ul.eu could work on this case?~~ Mirror option added (WSAMirror)
- - ~~Check if using Windows 11. Accepting versions starting `22*.*`~~ See v0.0.6. Added checks before running WSATools as launcher. See [here](https://dev.to/weareblahs/i-found-it-the-most-complex-way-to-check-operating-system-build-number-before-running-an-batch-script-1cmc) for explaination. (WSAToolsLauncher)
+ - ~~Check if using Windows 11. Accepting versions starting `22*.*`~~ See v0.0.6. Added checks before running WSAUtilities as launcher. See [here](https://dev.to/weareblahs/i-found-it-the-most-complex-way-to-check-operating-system-build-number-before-running-an-batch-script-1cmc) for explaination. (WSAUtilitiesLauncher)
  - ~~XAPK Installation~~ See v0.0.3 for initial version. (InstallXAPK)
  - Screenshot does not work at this moment as it returns white screen on output PNG file (Screenshot / ScreenshotDT)
  - Multilanguage
  - Installation falied for other packages other than the main one (InstallXAPK)
  - Install Aurora + Microsoft Launcher post-install (InstallWSA / InstallWSAMirror / ~~Standalone Script~~)、
- - Migrate all config stuffs to `WSAtools.inf`
+ - Migrate all config stuffs to `WSAUtilities.inf`
