@@ -1,20 +1,30 @@
 @echo off
+:: Import lang properties
+for /f "delims=" %%i in ('LocalVariables WSAUtilities.ini Localization Language') do set lang=%%i >nul
+for /f "delims=" %%i in ('LocalVariables lang\%lang:~0,2%.ini InstallXAPK intro1') do set intro1=%%i >nul
+for /f "delims=" %%i in ('LocalVariables lang\%lang:~0,2%.ini InstallXAPK intro2') do set intro2=%%i >nul
+for /f "delims=" %%i in ('LocalVariables lang\%lang:~0,2%.ini InstallXAPK intro3') do set intro3=%%i >nul
+for /f "delims=" %%i in ('LocalVariables lang\%lang:~0,2%.ini InstallXAPK intro4') do set intro4=%%i >nul
+for /f "delims=" %%i in ('LocalVariables lang\%lang:~0,2%.ini additional_uni waitprompt') do set waitprompt=%%i >nul
+for /f "delims=" %%i in ('LocalVariables lang\%lang:~0,2%.ini InstallXAPK importxapk') do set importxapk=%%i >nul
+for /f "delims=" %%i in ('LocalVariables lang\%lang:~0,2%.ini InstallXAPK extractprompt') do set extractprompt=%%i >nul
+for /f "delims=" %%i in ('LocalVariables lang\%lang:~0,2%.ini additional_uni install') do set installprompt=%%i >nul
 
-echo Windows Subsystem for Android XAPK app installer
-echo This script uses adb and simplifies installation for XAPK bundles on WSA.
-echo Before you start, please ensure that you toggled "Developer Mode" on in WSA settings.
-echo Please note that OBB files are not supported by this script at the moment. After installation, the script will exit by itself.
-echo Please wait...
+echo %intro1%
+echo %intro2%
+echo %intro3%
+echo %intro4%
+echo %waitprompt%
 
 :: Pre-installation - restarting WSA
 WsaClient.exe /restart
 %cd%\adb connect localhost:58526
 
 :apk_install
-set /P apk=Drag and drop your XAPK bundle here / type in the path here then press "Enter":
+set /P apk=%importxapk%
 
 :: Extract XAPK to temp dir and create batch file
-echo Extracting APK file...
+echo %extractprompt%
 %cd%\7z e -aoa "%apk%" -otemp
 
 :: Delete icon and manifest, then create batch
@@ -25,11 +35,11 @@ cd temp
 dir /b > temp.bat
 
 :: Create batch (2) - Replace stuffs
-%cd%\..\fart.exe "temp.bat" "com." "%cd%\..\adb install "com."
-%cd%\..\fart.exe "temp.bat" "config" "%cd%\..\adb install config"
+%cd%\..\fart.exe "temp.bat" "com." "%cd%\..\adb install-multiple com."
+%cd%\..\fart.exe -C "temp.bat" ".apk\r\n" ".apk \x5e\r\n"
 %cd%\..\fart.exe -C "temp.bat" temp.bat "  "
 
 :: Run final generated ADB script
-echo Installing...
+echo %installprompt%
 start temp.bat
-call PostInstallAPK.bat
+call ..\PostInstallAPK.bat

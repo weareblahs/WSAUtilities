@@ -1,38 +1,75 @@
-@echo off
+@echo on
+@setlocal enableextensions
+@cd /d "%~dp0"
+:: Language setup
+for /f "delims=" %%i in ('LocalVariables WSAUtilities.ini Localization Language') do set lang=%%i >nul
+for /f "delims=" %%i in ('LocalVariables lang\%lang:~0,2%.ini additional_uni runasadmin') do set runasadmin=%%i >nul
+for /f "delims=" %%i in ('LocalVariables lang\%lang:~0,2%.ini InstallWSA startintro') do set startintro=%%i >nul
+for /f "delims=" %%i in ('LocalVariables lang\%lang:~0,2%.ini InstallWSA startintro2') do set startintro2=%%i >nul
+for /f "delims=" %%i in ('LocalVariables lang\%lang:~0,2%.ini InstallWSA urlprompt') do set urlprompt=%%i >nul
+for /f "delims=" %%i in ('LocalVariables lang\%lang:~0,2%.ini InstallWSA postinstall1') do set postinstall1=%%i >nul
+for /f "delims=" %%i in ('LocalVariables lang\%lang:~0,2%.ini InstallWSA postinstall2') do set postinstall2=%%i >nul
+for /f "delims=" %%i in ('LocalVariables lang\%lang:~0,2%.ini InstallWSA postinstall3') do set postinstall3=%%i >nul
+for /f "delims=" %%i in ('LocalVariables lang\%lang:~0,2%.ini InstallWSA postinstall4') do set postinstall4=%%i >nul
+for /f "delims=" %%i in ('LocalVariables lang\%lang:~0,2%.ini InstallWSA startdownload') do set startdownload=%%i >nul
+for /f "delims=" %%i in ('LocalVariables lang\%lang:~0,2%.ini InstallWSA startinstall')do set startinstall=%%i >nul
+for /f "delims=" %%i in ('LocalVariables lang\%lang:~0,2%.ini InstallWSA enablevm')do set enablevm=%%i >nul
+for /f "delims=" %%i in ('LocalVariables lang\%lang:~0,2%.ini additional_uni yes') do set yes=%%i >nul
+for /f "delims=" %%i in ('LocalVariables lang\%lang:~0,2%.ini additional_uni no') do set no=%%i >nul
+for /f "delims=" %%i in ('LocalVariables lang\%lang:~0,2%.ini additional_uni SelectPrompt') do set selectprompt=%%i >nul
+for /f "delims=" %%i in ('LocalVariables lang\%lang:~0,2%.ini additional_uni complete1') do set ic1=%%i >nul
+for /f "delims=" %%i in ('LocalVariables lang\%lang:~0,2%.ini additional_uni startdownload') do set startdownload=%%i >nul
+for /f "delims=" %%i in ('LocalVariables lang\%lang:~0,2%.ini InstallWSAMirror space') do set space=%%i >nul
+for /f "delims=" %%i in ('LocalVariables WSAUtilities.ini WSAMirror URL') do set url=%%i >nul
+for /f "delims=" %%i in ('LocalVariables WSAUtilities.ini Downloading DlMethod') do set dlmethod=%%i >nul
 
+goto prestart
 :: The following lines are used to check admin access.
+:prestart
 NET SESSION >nul 2>&1
 IF %ERRORLEVEL% EQU 0 (
     GOTO start
 ) ELSE (
-    ECHO Please run this script as administrator. If you didn't know how to run it, then right click then Run as Administrator.
+    ECHO %runasadmin%
     pause
     exit
 )
 
 :start
-echo Windows Subsystem for Android installation script
-echo This script simplifies the installation of Windows Subsystem for Android and requires compatible Windows 11 computers to install it, no matter you're a Windows Insider or a normal Windows user.
-echo This might take 1.2GB of your storage space. Data charges apply.
+echo %startintro%
+echo %startintro2%
+echo %space%
 echo pause
-echo Starting download...
-:: Change the line below to use a different installer. See https://github.com/weareblahs/wsa-auto-install[hash]how-this-works---a-teardown.
-aria2c -x 16 -s 16 -o wsa_installation.msixbundle "https://api.onedrive.com/v1.0/shares/u!aHR0cHM6Ly8xZHJ2Lm1zL3UvcyFBbFUxUzJPMlNvMmtxVFMzRWxlenljN3hhbXBUP2U9Mkx0SHh4/root/content" 
+echo %startdownload%
+:: Change the line below to use a different installer.
+if %dlmethod% == aria2c (
+aria2c -x 16 -s 16 -o wsa_installation.msixbundle %url%
+goto install
+)
+if %dlmethod% == wget (
+wget -O wsa_installation.msixbundle %url%
+goto install
+)
+if %dlmethod% == curl (
+curl -o wsa_installation.msixbundle %url%
+goto install
+)
 
-echo Starting installation...
+:install
+echo %startinstall%
 powershell Add-AppxPackage -Path wsa_installation.msixbundle
 
-echo Enabling Virtual Machine Platform through device settings...
+echo %enablevm%%
 dism /online /Enable-Feature /FeatureName:VirtualMachinePlatform /All
 
-echo Installation complete!
-echo After enabling Virtual Machine Platform, you might want to restart your computer.
-echo Do you want to restart now?
-echo After restart, access the WSA control panel through the Start Menu.
-echo Amazon Appstore will be pre-installed by default.
-echo [Y]: Yes
-echo [N]: No
-set /p restartprompt=Please select: 
+echo %complete1%
+echo %postinstall1%
+echo %postinstall2%
+echo %postinstall3%
+echo %postinstall4%
+echo [Y]: %yes%
+echo [N]: %no%
+set /p restartprompt=%selectprompt%
 if %restartprompt%== 1 shutdown /r /t 0 /d WSATools Restart
 if %restartprompt%== 2 exit
 pause
