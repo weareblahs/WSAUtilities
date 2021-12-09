@@ -1,4 +1,4 @@
-# WSAManager
+# WSAUtilities
 Tools for Windows Subsystem for Android™ that only uses batch scripts and command line-based softwares. Was WSAtools once.
 
 # For users using dev builds of Windows 11
