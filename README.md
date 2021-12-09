@@ -81,6 +81,7 @@ Screenshot through ADB for Windows Subsystem for Android apps. DRM-protected con
 Checks for updates of Windows Subsystem for Android.
 
 ## TODO: Fixes and Improvements
+ - Name change migration from WSAtools to WSAUtilities
  - ~~Turn Windows Features On or Off in batch script (WSAInstall)~~ Now uses DISM to turn it on.
  - curl: https://store.rg-adguard.net/api/GetFiles (POST?) and get MSIX URL. Currently guiding users who uses this script to copy the link from https://store.rg-adguard.net/. (InstallWSA)
    - ~~Using a mirror on Google Drive / s-ul.eu could work on this case?~~ Mirror option added (WSAMirror)
