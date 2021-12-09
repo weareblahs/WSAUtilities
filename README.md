@@ -4,13 +4,31 @@ Tools for Windows Subsystem for Android™ that only uses batch scripts and comm
 # For users using dev builds of Windows 11
 The dev build batch is now on WSAUtilities releases starting 0.0.9.
 
+### Translators required!
+I'm currently migrating all the build numbers / build versions / localization stuffs / options to a INF file, which lets me put multilanguage as an option. Please note that some Asian languages (Japanese / Chinese) won't be supported since there's some limitations with Command Prompt on this kind of stuffs, even running `chcp (code)` before running script.  
+Translators credits can be seen [here](https://github.com/weareblahs/WSAUtilities/blob/main/lang/LanguageCredits.md)
+
 ## Credits
 Special thanks to Simone Franco, the developer of WSATools for this new name.
+### Software credits
+ - NirCmd courtesy of NirSoft
+ - Aria2 made by Tatsuhiro Tsujikawa (Lead developer)
+   - Original repository: https://github.com/aria2/aria2/tree/release-1.24.0
+ - FART (Find and Replace Text)
+   - Original source code from https://sourceforge.net/projects/fart-it/
+   - Improved by lionello in GitHub (https://github.com/lionello/fart-it)
+   - Compiled by me (https://github.com/weareblahs/fart-builds/releases/tag/v1.99c)
+ - 7-zip (Command line parts only)
+   - Source code on https://sourceforge.net/projects/sevenzip/files/7-Zip/
+ - Microsoft for Windows Subsystem for Android
+ - Wget
+   - Source code on https://savannah.gnu.org/git/?group=wget
+
+## Disclaimer
+This project isn't affliated with either Microsoft Corporation and Google.
 
 ### Looking for tools to add!
 Other tools to add into this collection of WSAUtilities? Then sumbit an issue with the tag "New Feature".
-### Translators required!
-I'm currently migrating all the build numbers / build versions / localization stuffs / options to a INF file, which lets me put multilanguage as an option. Please note that some Asian languages (Japanese / Chinese) won't be supported since there's some limitations with Command Prompt on this kind of stuffs, even running `chcp (code)` before running script.
 
 ## Requirements
  - Windows 11 computer (of course)
@@ -19,6 +37,7 @@ I'm currently migrating all the build numbers / build versions / localization st
  - Processor with Virtualization support
    - This is a basic requirement of emulating some Linux-based OSes. If you used Bluestacks / Nox or other Android emulator before, you probably turned it on before.
  - Basic requirements of Windows Subsystem for Android ([here](https://www.microsoft.com/en-us/windows/windows-11-specifications#table2))
+
 ## Download
 See https://github.com/weareblahs/WSAUtilities/releases.
 
