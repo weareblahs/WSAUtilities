@@ -1,5 +1,7 @@
 # WSAUtilities
-Tools for Windows Subsystem for Android™ that only uses batch scripts and command line-based softwares. Was WSAtools once.
+Tools for Windows Subsystem for Android™ that only uses batch scripts and command line-based softwares. Was WSAtools once, but not the APK installer on Windows Store.  
+  
+GUI launcher coming very soon.
 
 # For users using dev builds of Windows 11
 The dev build batch is now on WSAUtilities releases starting 0.0.9.
