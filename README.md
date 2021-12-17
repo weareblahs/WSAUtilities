@@ -3,6 +3,11 @@ Tools for Windows Subsystem for Android™ that only uses batch scripts and comm
   
 GUI launcher coming very soon.
 
+## Running Build 22523?
+Check the Releases page for more information on how to patch the WSAUtilities.ini file to detect it.  
+  
+~~TL;DR: Change the Devbuild property to 22523, that batch script just change it automatically with the help of FART~~
+
 # For users using dev builds of Windows 11
 The dev build batch is now on WSAUtilities releases starting 0.0.9.
 
