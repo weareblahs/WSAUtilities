@@ -3,6 +3,10 @@ Tools for Windows Subsystem for Android™ that only uses batch scripts and comm
   
 GUI launcher coming very soon.
 
+# For new users
+Before you do anything with it, remember that **This thing only works with Windows 11 computers**.  
+## Where to download?
+https://github.com/weareblahs/WSAUtilities/releases, then download the newest ZIP file.
 ## Running Build 22523?
 Check the Releases page for more information on how to patch the WSAUtilities.ini file to detect it.  
   
