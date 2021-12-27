@@ -23,6 +23,8 @@ Builds other than this (including 21996) will be ignored from running this scrip
 ### Translators required!
 I'm currently migrating all the build numbers / build versions / localization stuffs / options to a INF file, which lets me put multilanguage as an option. Please note that some Asian languages (Japanese / Chinese) won't be supported since there's some limitations with Command Prompt on this kind of stuffs, even running `chcp (code)` before running script.  
 Translators credits can be seen [here](https://github.com/weareblahs/WSAUtilities/blob/main/lang/LanguageCredits.md)
+#### Wait, how to translate?
+See [here](https://github.com/weareblahs/WSAUtilities/blob/main/lang/TranslationGuide.md)
 
 ## Credits
 Special thanks to Simone Franco, the developer of WSATools for this new name.
