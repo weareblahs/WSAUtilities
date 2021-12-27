@@ -17,7 +17,7 @@ The dev build batch is now on WSAUtilities releases starting 0.0.9.
 
 ## Which build / version of Windows 11 will the WSAUtilitiesLauncher script detect?
  - Windows 11 Build 22000 (any versions) [Beta / Stable]
- - Windows 11 Build 22523 (any versions) [Dev build]
+ - Windows 11 Build 22523 (any versions) [Dev build]  
 Builds other than this (including 21996) will be ignored from running this script. To test other unstable versions, modify WSAUtilities.ini to let it detect your Windows 11 build version.
 
 ### Translators required!
