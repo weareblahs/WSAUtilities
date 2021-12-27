@@ -15,6 +15,11 @@ Check the Releases page for more information on how to patch the WSAUtilities.in
 # For users using dev builds of Windows 11
 The dev build batch is now on WSAUtilities releases starting 0.0.9.
 
+## Which build / version of Windows 11 will the WSAUtilitiesLauncher script detect?
+ - Windows 11 Build 22000 (any versions) [Beta / Stable]
+ - Windows 11 Build 22523 (any versions) [Dev build]
+Builds other than this (including 21996) will be ignored from running this script. To test other unstable versions, modify WSAUtilities.ini to let it detect your Windows 11 build version.
+
 ### Translators required!
 I'm currently migrating all the build numbers / build versions / localization stuffs / options to a INF file, which lets me put multilanguage as an option. Please note that some Asian languages (Japanese / Chinese) won't be supported since there's some limitations with Command Prompt on this kind of stuffs, even running `chcp (code)` before running script.  
 Translators credits can be seen [here](https://github.com/weareblahs/WSAUtilities/blob/main/lang/LanguageCredits.md)
@@ -79,7 +84,7 @@ Currently planning to add hash verification using hashsum.bat.
 ## InstallWSAMirror
 Installs Windows Subsystem for Android from a OneDrive mirror hosted by me. Please note that this mirror may exceed OneDrive's download quota.  
   
-Version on my cloud drive: `1.2.32822.0 (9/11/2021)`
+Version on my cloud drive: `1.2.32828.0`
 
 ## InstallAPK
 This script installs APK files through ADB (`platform-tools` to be specific) with a wizard-like interface. You need to drag and drop the APK to the command prompt window.
@@ -120,5 +125,5 @@ Checks for updates of Windows Subsystem for Android.
 - [ ] Screenshot does not work at this moment as it returns white screen on output PNG file (Screenshot / ScreenshotDT)
 - [x] Multilanguage (Multilanguage system finished. Now waiting for people to contribute translation through pull requests)
 - [x] Installation falied for other packages other than the main one (InstallXAPK) (Fixed on v0.0.9)
-- [x] Install Aurora + Microsoft Launcher post-install (InstallWSA / InstallWSAMirror / Standalone Script) (Working - as an option.)
+- [x] Install Aurora + Microsoft Launcher post-install (InstallWSA / InstallWSAMirror / Standalone Script) (See v0.0.9b)
 - [x] Migrate all config stuffs to `WSAUtilities.inf` (Migration complete. See 0.0.9.)
