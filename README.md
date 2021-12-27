@@ -111,14 +111,14 @@ Screenshot through ADB for Windows Subsystem for Android apps. DRM-protected con
 Checks for updates of Windows Subsystem for Android.
 
 ## TODO: Fixes and Improvements
- - ~~Name change migration from WSAtools to WSAUtilities~~ Finished since v0.0.9
- - ~~Turn Windows Features On or Off in batch script (WSAInstall)~~ Now uses DISM to turn it on.
- - curl: https://store.rg-adguard.net/api/GetFiles (POST?) and get MSIX URL. Currently guiding users who uses this script to copy the link from https://store.rg-adguard.net/. (InstallWSA)
-   - ~~Using a mirror on Google Drive / s-ul.eu could work on this case?~~ Mirror option added (WSAMirror)
- - ~~Check if using Windows 11. Accepting versions starting `22*.*`~~ See v0.0.6. Added checks before running WSAUtilities as launcher. See [here](https://dev.to/weareblahs/i-found-it-the-most-complex-way-to-check-operating-system-build-number-before-running-an-batch-script-1cmc) for explaination. (WSAUtilitiesLauncher)
- - ~~XAPK Installation~~ See v0.0.3 for initial version. (InstallXAPK)
- - Screenshot does not work at this moment as it returns white screen on output PNG file (Screenshot / ScreenshotDT)
- - ~~Multilanguage~~ Multilanguage system finished. Now waiting for people to translate
- - ~~Installation falied for other packages other than the main one (InstallXAPK)~~ Fixed on v0.0.9
- - Install Aurora + Microsoft Launcher post-install (InstallWSA / InstallWSAMirror / ~~Standalone Script~~)
- - Migrate all config stuffs to `WSAUtilities.inf`
+- [x] Name change migration from WSAtools to WSAUtilities (Finished since v0.0.9)
+- [x] Turn Windows Features On or Off in batch script (WSAInstall) (Now uses DISM to turn it on.)
+- [ ] curl: https://store.rg-adguard.net/api/GetFiles (POST?) and get MSIX URL. Currently guiding users who uses this script to copy the link from https://store.rg-adguard.net/. (InstallWSA)
+- [x] Alternate mirror option: Using a mirror on Google Drive / s-ul.eu could work on this case? (WSAMirror) (OneDrive Mirror option added)
+- [x] Check if using Windows 11. Accepting versions starting `22*.*` (See v0.0.6. Added checks before running WSAUtilities as launcher. (WSAUtilitiesLauncher) See [here](https://dev.to/weareblahs/i-found-it-the-most-complex-way-to-check-operating-system-build-number-before-running-an-batch-script-1cmc) for explaination).
+- [x] XAPK Installation (See v0.0.3 for initial version. (InstallXAPK))
+- [ ] Screenshot does not work at this moment as it returns white screen on output PNG file (Screenshot / ScreenshotDT)
+- [x] Multilanguage (Multilanguage system finished. Now waiting for people to contribute translation through pull requests)
+- [x] Installation falied for other packages other than the main one (InstallXAPK) (Fixed on v0.0.9)
+- [x] Install Aurora + Microsoft Launcher post-install (InstallWSA / InstallWSAMirror / Standalone Script) (Working - as an option.)
+- [x] Migrate all config stuffs to `WSAUtilities.inf` (Migration complete. See 0.0.9.)
