@@ -15,11 +15,15 @@ for /f "delims=" %%i in ('LocalVariables lang\%lang:~0,2%.ini InstallWSA postins
 for /f "delims=" %%i in ('LocalVariables lang\%lang:~0,2%.ini InstallWSA startdownload') do set startdownload=%%i >nul
 for /f "delims=" %%i in ('LocalVariables lang\%lang:~0,2%.ini InstallWSA startinstall')do set startinstall=%%i >nul
 for /f "delims=" %%i in ('LocalVariables lang\%lang:~0,2%.ini InstallWSA enablevm')do set enablevm=%%i >nul
+for /f "delims=" %%i in ('LocalVariables lang\%lang:~0,2%.ini InstallWSA postaur')do set postaur=%%i >nul
+for /f "delims=" %%i in ('LocalVariables lang\%lang:~0,2%.ini InstallWSA postmsl')do set postmsl=%%i >nul
 for /f "delims=" %%i in ('LocalVariables lang\%lang:~0,2%.ini additional_uni yes') do set yes=%%i >nul
 for /f "delims=" %%i in ('LocalVariables lang\%lang:~0,2%.ini additional_uni no') do set no=%%i >nul
 for /f "delims=" %%i in ('LocalVariables lang\%lang:~0,2%.ini additional_uni SelectPrompt') do set selectprompt=%%i >nul
 for /f "delims=" %%i in ('LocalVariables lang\%lang:~0,2%.ini additional_uni complete1') do set ic1=%%i >nul
 for /f "delims=" %%i in ('LocalVariables WSAUtilities.ini Downloading DlMethod') do set dlmethod=%%i >nul
+for /f "delims=" %%i in ('LocalVariables WSAUtilities.ini InstallWSA InstallAurora') do set aur=%%i >nul
+for /f "delims=" %%i in ('LocalVariables WSAUtilities.ini InstallWSA InstallMicrosoftLauncher') do set msl=%%i >nul
 goto prestart
 :: The following lines are used to check admin access.
 :prestart
@@ -58,6 +62,23 @@ powershell Add-AppxPackage -Path wsa_installation.msixbundle
 echo %enablevm%
 dism /online /Enable-Feature /FeatureName:VirtualMachinePlatform /All
 
+if %aur% == 1 (
+echo InstallAurora >> postinstallwsa.bat
+echo %postaur%
+goto finishline
+) if %msl% == 1 (
+echo InstallMicrosoftLauncher >> postinstallwsa.bat
+echo %postmsl%
+goto finishline
+) else (
+goto finish
+)
+
+:finishline
+echo del postinstallwsa.bat && pause && exit >> postinstall.bat
+goto finish
+
+:finish
 echo %ic1%
 echo %postinstall1%
 echo %postinstall2%

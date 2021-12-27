@@ -7,6 +7,7 @@ for /f "delims=" %%i in ('LocalVariables WSAUtilities.ini Localization Language'
 
 :: Start localization before starting script
 for /f "delims=" %%i in ('LocalVariables lang\%lang:~0,2%.ini WSAUtilities SelectPrompt') do set selectprompt=%%i >nul
+for /f "delims=" %%i in ('LocalVariables lang\%lang:~0,2%.ini WSAUtilities 0') do set s0=%%i >nul
 for /f "delims=" %%i in ('LocalVariables lang\%lang:~0,2%.ini WSAUtilities 1') do set s1=%%i >nul
 for /f "delims=" %%i in ('LocalVariables lang\%lang:~0,2%.ini WSAUtilities 2') do set s2=%%i >nul
 for /f "delims=" %%i in ('LocalVariables lang\%lang:~0,2%.ini WSAUtilities 3') do set s3=%%i >nul
@@ -25,7 +26,15 @@ goto start
 echo %productname% %version% %codename%
 echo.
 echo.
+
 echo %selectprompt%
+if exist postinstallwsa.bat (
+    echo %s0%
+    goto continue
+) else (
+    goto continue
+)
+:continue
 echo %s1%
 echo %s2%
 echo %s3%
@@ -42,6 +51,7 @@ echo.
 echo %disc%
 echo.
 set /p var=%selvar%
+if %var%== 0 GOTO postinstallwsa
 if %var%== 1 GOTO installwsa
 if %var%== 2 GOTO installwsam
 if %var%== 3 GOTO installapk
@@ -53,6 +63,10 @@ if %var%== a1 GOTO installaurora
 if %var%== A2 GOTO installlauncher
 if %var%== a2 GOTO installlauncher
 if not %var%== GOTO exit
+
+:postinstallwsa
+postinstallwsa.bat
+
 :installwsa
 cls
 nircmd elevate InstallWSA
