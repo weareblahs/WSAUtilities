@@ -7,10 +7,6 @@ Offline Installer coming very soon. GUI Launcher planned after this.
 Before you do anything with it, remember that **This thing only works with Windows 11 computers**.  
 ## Where to download?
 https://github.com/weareblahs/WSAUtilities/releases, then download the newest ZIP file.
-## Running Build 22523?
-Check the Releases page for more information on how to patch the WSAUtilities.ini file to detect it.  
-  
-~~TL;DR: Change the Devbuild property to 22523, that batch script just change it automatically with the help of FART~~
 
 # For users using dev builds of Windows 11
 The dev build batch is now on WSAUtilities releases starting 0.0.9.
