@@ -2,10 +2,12 @@
 Tools for Windows Subsystem for Android™ that only uses batch scripts and command line-based softwares. Was WSAtools once, but not the APK installer on Windows Store.
 ## WIP
 ### New stuffs
- - Offline installer
+(nothing)
 ### Planned but not confirmed
  - GUI Launcher
 
+# NEW: Build offline version of InstallWSA with OfflineInstallWSA (separate)
+This option doesn't download WSAUtilities on your PC, but instead, it just downloads and installs Windows Subsystem for Android on PCs. See [here](https://github.com/weareblahs/WSAUtilities/discussions/14) for more info.
 # For new users
 Before you do anything with it, remember that **This thing only works with Windows 11 computers**.  
 ## Where to download?
