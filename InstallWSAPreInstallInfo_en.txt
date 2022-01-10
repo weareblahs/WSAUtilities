@@ -1,0 +1,3 @@
+This installation package contains products by Microsoft Corporation (Windows Subsystem for Android), which requires you to read the Privacy Policy on https://privacy.microsoft.com/en-us/privacystatement. Please accept the terms and conditions.
+
+This installation will use 8GB of your disk space.

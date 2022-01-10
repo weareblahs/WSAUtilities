@@ -1,4 +1,4 @@
-@echo on
+@echo off
 @setlocal enableextensions
 @cd /d "%~dp0"
 :: Language setup
@@ -22,6 +22,8 @@ for /f "delims=" %%i in ('LocalVariables lang\%lang:~0,2%.ini additional_uni sta
 for /f "delims=" %%i in ('LocalVariables lang\%lang:~0,2%.ini InstallWSAMirror space') do set space=%%i >nul
 for /f "delims=" %%i in ('LocalVariables WSAUtilities.ini WSAMirror URL') do set url=%%i >nul
 for /f "delims=" %%i in ('LocalVariables WSAUtilities.ini Downloading DlMethod') do set dlmethod=%%i >nul
+for /f "delims=" %%i in ('LocalVariables lang\%lang:~0,2%.ini InstallWSA preacceptprompt') do set preacceptprompt=%%i >nul
+for /f "delims=" %%i in ('LocalVariables lang\%lang:~0,2%.ini InstallWSA acceptprompt') do set acceptprompt=%%i >nul
 
 goto prestart
 :: The following lines are used to check admin access.
@@ -40,10 +42,12 @@ echo %startintro%
 echo %startintro2%
 echo %space%
 echo pause
+goto license
+
 :license
-echo Please read the information below:
-type "InstallWSAPreInstallInfo_%lang%.txt"
-set /P accept=Do you accept the license? [Y/N]
+echo %preacceptprompt%
+type "InstallWSAPreInstallInfo_%lang:~0,2%.txt"
+set /P accept=%acceptprompt% [Y/N]
 if %accept%==Y goto startdownload
 if %accept%==y goto startdownload
 if %accept%==N exit

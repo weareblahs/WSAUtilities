@@ -8,6 +8,8 @@ for /f "delims=" %%i in ('LocalVariables lang\%lang:~0,2%.ini additional_uni run
 for /f "delims=" %%i in ('LocalVariables lang\%lang:~0,2%.ini InstallWSA startintro') do set startintro=%%i >nul
 for /f "delims=" %%i in ('LocalVariables lang\%lang:~0,2%.ini InstallWSA startintro2') do set startintro2=%%i >nul
 for /f "delims=" %%i in ('LocalVariables lang\%lang:~0,2%.ini InstallWSA urlprompt') do set urlprompt=%%i >nul
+for /f "delims=" %%i in ('LocalVariables lang\%lang:~0,2%.ini InstallWSA preacceptprompt') do set preacceptprompt=%%i >nul
+for /f "delims=" %%i in ('LocalVariables lang\%lang:~0,2%.ini InstallWSA acceptprompt') do set acceptprompt=%%i >nul
 for /f "delims=" %%i in ('LocalVariables lang\%lang:~0,2%.ini InstallWSA postinstall1') do set postinstall1=%%i >nul
 for /f "delims=" %%i in ('LocalVariables lang\%lang:~0,2%.ini InstallWSA postinstall2') do set postinstall2=%%i >nul
 for /f "delims=" %%i in ('LocalVariables lang\%lang:~0,2%.ini InstallWSA postinstall3') do set postinstall3=%%i >nul
@@ -40,11 +42,12 @@ IF %ERRORLEVEL% EQU 0 (
 echo %startintro%
 echo %startintro2%
 set /P url=%urlprompt%
+goto license
 
 :license
-echo Please read the information below:
-type "InstallWSAPreInstallInfo_%lang%.txt"
-set /P accept=Do you accept the license? [Y/N]
+echo %preacceptprompt%
+type "InstallWSAPreInstallInfo_%lang:~0,2%.txt"
+set /P accept=%acceptprompt% [Y/N]
 if %accept%==Y goto startdownload
 if %accept%==y goto startdownload
 if %accept%==N exit
