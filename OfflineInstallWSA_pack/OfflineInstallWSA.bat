@@ -45,6 +45,8 @@ if %installconf%==N goto exit
 :install1
 echo Starting installation...
 powershell Add-AppxPackage -Path files\wsa_installation.msixbundle
+echo Enabling Virtual Machine Platform...
+dism /online /Enable-Feature /FeatureName:VirtualMachinePlatform /All
 echo Installation complete!
 echo After restarting your PC, find Windows Subsystem for Android on the Start menu
 echo to configure the system. Or, you can just open Amazon Appstore to install apps
