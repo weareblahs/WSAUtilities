@@ -41,6 +41,16 @@ echo %startintro%
 echo %startintro2%
 set /P url=%urlprompt%
 
+:license
+echo Please read the information below:
+type "InstallWSAPreInstallInfo_%lang%.txt"
+set /P accept=Do you accept the license? [Y/N]
+if %accept%==Y goto startdownload
+if %accept%==y goto startdownload
+if %accept%==N exit
+if %accept%==n exit
+
+:startdownload
 echo %startdownload%
 if %dlmethod% == aria2c (
 aria2c -x 16 -s 16 -o wsa_installation.msixbundle "%url%"

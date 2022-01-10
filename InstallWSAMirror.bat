@@ -40,6 +40,16 @@ echo %startintro%
 echo %startintro2%
 echo %space%
 echo pause
+:license
+echo Please read the information below:
+type "InstallWSAPreInstallInfo_%lang%.txt"
+set /P accept=Do you accept the license? [Y/N]
+if %accept%==Y goto startdownload
+if %accept%==y goto startdownload
+if %accept%==N exit
+if %accept%==n exit
+
+:startdownload
 echo %startdownload%
 :: Change the line below to use a different installer.
 if %dlmethod% == aria2c (
