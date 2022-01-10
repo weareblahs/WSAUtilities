@@ -46,7 +46,7 @@ goto license
 
 :license
 echo %preacceptprompt%
-type "InstallWSAPreInstallInfo_%lang:~0,2%.txt"
+type "lang\InstallWSAPreInstallInfo_%lang:~0,2%.txt"
 set /P accept=%acceptprompt% [Y/N]
 if %accept%==Y goto startdownload
 if %accept%==y goto startdownload
