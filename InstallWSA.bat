@@ -89,7 +89,6 @@ goto finish
 
 :finishline
 echo del postinstallwsa.bat && pause && exit >> postinstall.bat
-goto finish
 
 :finish
 echo %ic1%

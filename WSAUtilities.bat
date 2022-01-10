@@ -27,6 +27,7 @@ echo %productname% %version% %codename%
 echo.
 echo.
 
+:PostInstallWSA Post-install message
 echo %selectprompt%
 if exist postinstallwsa.bat (
     echo %s0%
@@ -34,13 +35,13 @@ if exist postinstallwsa.bat (
 ) else (
     goto continue
 )
+
 :continue
 echo %s1%
 echo %s2%
 echo %s3%
 echo %s4%
 echo %s5%
-echo %s6%
 echo.
 echo %additional%
 echo %a1%
@@ -57,7 +58,6 @@ if %var%== 2 GOTO installwsam
 if %var%== 3 GOTO installapk
 if %var%== 4 GOTO installxapk
 if %var%== 5 GOTO prescreenshot
-if %var%== 6 GOTO checkupdate
 if %var%== A1 GOTO installaurora
 if %var%== a1 GOTO installaurora
 if %var%== A2 GOTO installlauncher
@@ -93,10 +93,6 @@ echo [2]: PNG, Date and Time
 set /p var2=Select output type:
 if %var2%== 1 cls && Screenshot
 if %var2%== 2 cls && ScreenshotDT
-
-:checkupdate
-cls
-UpdateWSA.bat
 
 :installaurora
 cls
