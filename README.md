@@ -2,7 +2,8 @@
 Tools for Windows Subsystem for Android™ that only uses batch scripts and command line-based softwares. Was WSAtools once, but not the APK installer on Windows Store.
 ## WIP
 ### New stuffs
- - Graphical version of InstallWSAMirror through Advanced Installer (although I know it's not free software but there's still the code here)
+ - One-click installer for InstallWSAMirror through IExpress
+   - Original InstallWSAMirror GUI won't be made due to the software that I'm using to make (Advanced Installer) is for PC software installers.
 ### Planned but not confirmed
  - GUI Launcher
 
