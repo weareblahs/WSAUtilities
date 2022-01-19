@@ -17,6 +17,7 @@ for /f "delims=" %%i in ('LocalVariables lang\%lang:~0,2%.ini WSAUtilities 6') d
 for /f "delims=" %%i in ('LocalVariables lang\%lang:~0,2%.ini WSAUtilities Additional') do set additional=%%i >nul
 for /f "delims=" %%i in ('LocalVariables lang\%lang:~0,2%.ini WSAUtilities A1') do set a1=%%i >nul
 for /f "delims=" %%i in ('LocalVariables lang\%lang:~0,2%.ini WSAUtilities A2') do set a2=%%i >nul
+for /f "delims=" %%i in ('LocalVariables lang\%lang:~0,2%.ini WSAUtilities A3') do set a3=%%i >nul
 for /f "delims=" %%i in ('LocalVariables lang\%lang:~0,2%.ini WSAUtilities InstallWSATip') do set iwsatip=%%i >nul
 for /f "delims=" %%i in ('LocalVariables lang\%lang:~0,2%.ini WSAUtilities Disclaimer') do set disc=%%i >nul
 for /f "delims=" %%i in ('LocalVariables lang\%lang:~0,2%.ini WSAUtilities Selection') do set selvar=%%i >nul
@@ -46,6 +47,7 @@ echo.
 echo %additional%
 echo %a1%
 echo %a2%
+echo %a3%
 echo.
 echo %iwsatip%
 echo.
@@ -62,6 +64,8 @@ if %var%== A1 GOTO installaurora
 if %var%== a1 GOTO installaurora
 if %var%== A2 GOTO installlauncher
 if %var%== a2 GOTO installlauncher
+if %var%== A3 GOTO enablevmp
+if %var%== a3 GOTO enablevmp
 if not %var%== GOTO exit
 
 :postinstallwsa
@@ -101,3 +105,7 @@ InstallAurora.bat
 :installlauncher
 cls
 InstallMicrosoftLauncher.bat
+
+:enablevmp
+cls
+nircmd elevate EnableVMP
