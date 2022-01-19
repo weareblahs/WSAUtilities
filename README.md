@@ -18,7 +18,7 @@ https://github.com/weareblahs/WSAUtilities/releases, then download the newest ZI
 The devbuild is included in the config file of WSAUtilities in order to be used with WSAUtilitiesLauncher. The latest update will include the latest dev build as listed on Microsoft's website. ~~Don't tell anyone that I'm on Beta channel of Windows Insider~~
 
 ## I saw the pop-up (like the one shown below) and WSA refuses to start. What should I do?
-![image](https://user-images.githubusercontent.com/37889443/150119318-e26f3c23-e98f-4c5c-9f23-b1196696ec59.png)
+![image](https://user-images.githubusercontent.com/37889443/150119318-e26f3c23-e98f-4c5c-9f23-b1196696ec59.png)  
 If you're seeing this, that means that there's a problem with my script or you disabled Virtual Machine Platform (most possible: BlueStacks or other Android emulators want you to disable it). Here's how to fix it:
  - Download, extract and run the latest version of WSAUtilities.
  - Run WSAUtilities as usual, then type "A3" to enable Virtual Machine Platform.
