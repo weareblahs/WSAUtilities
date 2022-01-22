@@ -1,4 +1,5 @@
 @echo off
+@title installXAPK
 :: Import lang properties
 for /f "delims=" %%i in ('LocalVariables WSAUtilities.ini Localization Language') do set lang=%%i >nul
 for /f "delims=" %%i in ('LocalVariables lang\%lang:~0,2%.ini InstallXAPK intro1') do set intro1=%%i >nul

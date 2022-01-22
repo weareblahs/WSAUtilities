@@ -1,5 +1,6 @@
 @echo off
 @setlocal enableextensions
+@title InstallWSA
 @cd /d "%~dp0"
 :: Language setup
 for /f "delims=" %%i in ('LocalVariables WSAUtilities.ini Localization Language') do set lang=%%i >nul

@@ -1,4 +1,5 @@
 @echo off
+@title InstallAurora
 :: Lang properties
 for /f "delims=" %%i in ('LocalVariables WSAUtilities.ini Localization Language') do set lang=%%i >nul
 for /f "delims=" %%i in ('LocalVariables WSAUtilities.ini Localization Language') do set lang=%%i >nul

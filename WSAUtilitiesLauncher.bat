@@ -1,4 +1,5 @@
 @echo off
+@title WSAUtilitiesLauncher
 :: Lang import
 for /f "delims=" %%i in ('main\LocalVariables main\WSAUtilities.ini Localization Language') do set lang=%%i >nul
 for /f "delims=" %%i in ('main\LocalVariables main\lang\%lang:~0,2%.ini WSAUtilitiesLauncher intro1') do set intro1=%%i >nul

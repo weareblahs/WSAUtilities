@@ -1,5 +1,6 @@
 @echo off
 @setlocal enableextensions
+@title EnableVMP
 @cd /d "%~dp0"
 :: Language setup
 for /f "delims=" %%i in ('LocalVariables lang\%lang:~0,2%.ini InstallWSA enablevm')do set enablevm=%%i >nul

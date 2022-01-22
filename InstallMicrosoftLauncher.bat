@@ -1,4 +1,5 @@
 @echo off
+@title InstallMicrosoftLauncher
 :: Lang config
 for /f "delims=" %%i in ('LocalVariables WSAUtilities.ini Localization Language') do set lang=%%i >nul
 for /f "delims=" %%i in ('LocalVariables lang\%lang:~0,2%.ini InstallMicrosoftLauncher downloading') do set downloading=%%i >nul

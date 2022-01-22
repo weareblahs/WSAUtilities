@@ -1,5 +1,5 @@
 @echo off
-
+@Screenshot
 echo Windows Subsystem for Android Screenshot tool
 echo This script screenshots your current WSA screen. Currently supported if running 1 app.
 echo Please make sure that ADB (Developer Tools) is enabled.

@@ -1,4 +1,6 @@
 @echo off
+@title WSAUtilities
+
 :: Import properties from INI
 for /f "delims=" %%i in ('LocalVariables WSAUtilities.ini VersionInfo ProductName') do set productname=%%i >nul
 for /f "delims=" %%i in ('LocalVariables WSAUtilities.ini VersionInfo Version') do set version=%%i >nul
