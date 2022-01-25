@@ -6,7 +6,15 @@ Tools for Windows Subsystem for Android™ that only uses batch scripts and comm
    - Original InstallWSAMirror GUI won't be made due to the software that I'm using to make (Advanced Installer) is for PC software installers.
 ### Planned but not confirmed
  - GUI Launcher
-
+# Running the latest dev build but it just quits?
+ - Modify `WSAUtilities.ini` under the `main` folder:
+   - Find the "`Devbuild`" line, then change the property to the dev build number (example: 22538)
+   - Save it, then run `WSAUtilitiesLauncher.bat` on the root folder.
+ - Let patch replace it for you:
+   - Find a file called `patch_XXXXX.bat` (`XXXXX` is the build number, example: 22538)
+## Still won't work?
+**This method doesn't gurantee that it will work on all machines, especially older Windows builds.**
+ - Try running `WSAUtilities.bat` under the `main` folder.
 # NEW: Build offline version of InstallWSA with OfflineInstallWSA (separate)
 This option doesn't download WSAUtilities on your PC, but instead, it just downloads and installs Windows Subsystem for Android on PCs. See [here](https://github.com/weareblahs/WSAUtilities/discussions/14) for more info.
 # For new users
