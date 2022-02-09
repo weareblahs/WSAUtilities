@@ -4,6 +4,8 @@ Tools for Windows Subsystem for Android™ that only uses batch scripts and comm
 ### New stuffs
  - One-click installer for InstallWSAMirror through IExpress
    - Original InstallWSAMirror GUI won't be made due to the software that I'm using to make (Advanced Installer) is for PC software installers.
+ - Diagnostics page
+   - Advanced options, example: Start / Restart WSA client
 ### Planned but not confirmed
  - GUI Launcher
 # Running the latest dev build but it just quits?
