@@ -6,6 +6,10 @@ Tools for Windows Subsystem for Android™ that only uses batch scripts and comm
    - Original InstallWSAMirror GUI won't be made due to the software that I'm using to make (Advanced Installer) is for PC software installers.
  - Diagnostics page
    - Advanced options, example: Start / Restart WSA client
+
+## Suggestions?
+If you're trying to suggest something, you can suggest it [here](https://forms.gle/Cpaew55sYPZRB36Z9) or you can create an issue regarding to your suggestion.
+
 ### Planned but not confirmed
  - GUI Launcher
 # Running the latest dev build but it just quits?
