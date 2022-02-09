@@ -15,7 +15,7 @@ for /f "delims=" %%i in ('LocalVariables lang\%lang:~0,2%.ini WSAUtilities 2') d
 for /f "delims=" %%i in ('LocalVariables lang\%lang:~0,2%.ini WSAUtilities 3') do set s3=%%i >nul
 for /f "delims=" %%i in ('LocalVariables lang\%lang:~0,2%.ini WSAUtilities 4') do set s4=%%i >nul
 for /f "delims=" %%i in ('LocalVariables lang\%lang:~0,2%.ini WSAUtilities 5') do set s5=%%i >nul
-for /f "delims=" %%i in ('LocalVariables lang\%lang:~0,2%.ini WSAUtilities 6') do set s6=%%i >nul
+for /f "delims=" %%i in ('LocalVariables lang\%lang:~0,2%.ini WSAUtilities Diag') do set diag=%%i >nul
 for /f "delims=" %%i in ('LocalVariables lang\%lang:~0,2%.ini WSAUtilities Additional') do set additional=%%i >nul
 for /f "delims=" %%i in ('LocalVariables lang\%lang:~0,2%.ini WSAUtilities A1') do set a1=%%i >nul
 for /f "delims=" %%i in ('LocalVariables lang\%lang:~0,2%.ini WSAUtilities A2') do set a2=%%i >nul
@@ -55,6 +55,8 @@ echo %iwsatip%
 echo.
 echo %disc%
 echo.
+echo %diag%
+echo.
 set /p var=%selvar%
 if %var%== 0 GOTO postinstallwsa
 if %var%== 1 GOTO installwsa
@@ -68,6 +70,8 @@ if %var%== A2 GOTO installlauncher
 if %var%== a2 GOTO installlauncher
 if %var%== A3 GOTO enablevmp
 if %var%== a3 GOTO enablevmp
+if %var%== D GOTO diag
+if %var%== d GOTO diag
 if not %var%== GOTO exit
 
 :postinstallwsa
@@ -111,3 +115,6 @@ InstallMicrosoftLauncher.bat
 :enablevmp
 cls
 nircmd elevate EnableVMP
+
+:diag
+WSAUDiag
