@@ -80,15 +80,6 @@ If you're seeing this, that means that there's a problem with my script or you d
   - To run under Build 22526 of the Dev build, simply download `patch_dev22526.bat` under "Releases", copy to the root WSAUtilities folder then run it.
     Builds other than this (including 21996) will be ignored from running this script. To test other unstable versions, modify WSAUtilities.ini to let it detect your Windows 11 build version.
 
-### Translators required!
-
-I'm currently migrating all the build numbers / build versions / localization stuffs / options to a INF file, which lets me put multilanguage as an option. Please note that some Asian languages (Japanese / Chinese) won't be supported since there's some limitations with Command Prompt on this kind of stuffs, even running `chcp (code)` before running script.  
-Translators credits can be seen [here](https://github.com/weareblahs/WSAUtilities/blob/main/lang/LanguageCredits.md)
-
-#### Wait, how to translate?
-
-See [here](https://github.com/weareblahs/WSAUtilities/blob/main/lang/TranslationGuide.md)
-
 ## Credits
 
 Special thanks to Simone Franco, the developer of WSATools for this new name.
