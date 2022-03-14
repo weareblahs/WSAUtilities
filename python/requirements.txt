@@ -1,0 +1,6 @@
+configparser
+pythondialog
+admin
+clint
+adbutils
+pyaxmlparser
