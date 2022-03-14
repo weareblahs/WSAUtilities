@@ -1,2 +1,1 @@
-/python/temp/*.apk # Exclude downloaded APK files during test
 /temp/*.apk # Exclude downloaded APK files during test
