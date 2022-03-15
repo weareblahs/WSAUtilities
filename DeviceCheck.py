@@ -1,5 +1,6 @@
 import platform
 import configparser
+import time
 
 config = configparser.ConfigParser()
 configL = configparser.RawConfigParser()
@@ -16,7 +17,9 @@ if currentBuild == userVersion:
     write_config.set("System","supported","true")
     cfgfile = open("WSAU_user.ini",'w')
     write_config.write(cfgfile)
-    print("Please relaunch command line launcher.")
+    print("Redirecting to launcher in 5 seconds...")
+    time.sleep(5)
+    exec(open("CliLauncher.py").read())
 
 elif currentBuild > userVersion:
     print("You are running an insider build of Windows 11, that means your computer can run Windows Subsystem for Android and it can also be downloaded on Windows Store without using InstallWSA.")
@@ -24,7 +27,12 @@ elif currentBuild > userVersion:
     write_config.set("System","supported","true")
     cfgfile = open("WSAU_user.ini",'w')
     write_config.write(cfgfile)
-    print("Please relaunch command line launcher.")
+    print("Redirecting to launcher in 5 seconds...")
+    time.sleep(5)
+    exec(open("CliLauncher.py").read())
 
 else:
     print("Device not supported for Windows Subsystem for Android. Make sure you installed a stable version of Windows 11 or Windows 11 Insider Builds.")
+    print("Exiting in 5 seconds...")
+    time.sleep(5)
+    exit()

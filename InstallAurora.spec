@@ -4,7 +4,7 @@
 block_cipher = None
 
 
-a = Analysis(['InstallAurora.py'],
+a = Analysis(['InstallAurora.py', 'conadb.py'],
              pathex=[],
              binaries=[],
              datas=[],

@@ -4,3 +4,7 @@ admin
 clint
 adbutils
 pyaxmlparser
+pywin32
+httplib2
+aria2p
+hurry.filesize
