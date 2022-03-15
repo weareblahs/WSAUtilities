@@ -4,15 +4,19 @@ Tools for Windows Subsystem for Android™ that only uses batch scripts and comm
 
 ## WIP
 
-## Python migration
+### Python migration
+
+#### Why?
+
+Python allowed me to expand new features, such as more easier PC checks, read / write INIs and more.
+
+#### About this migration
 
 This repository is now under Python migration. This means:
 
 - Existing scripts will be converted into Python scripts
 
 - Scripts under releases will be repackaged as Windows executables
-
-- Other external tools will be eliminated as much as possible by using its Python equivalents (example: ``aria2p`` will be replacing ``aria2c``)
 
 - PowerShell scripts will still be runned as normal (post-download for InstallWSA)
 
@@ -21,6 +25,26 @@ This repository is now under Python migration. This means:
 - Configuration file can be configured through ``Configuration.py``
 
 After migration completed, all the batch files will be archived and new features will be developed soon.
+
+#### Bad stuffs that will happen after this migration
+
+- You might need to install other stuffs before you run, which you need to Download Python from Microsoft Store / python.org/downloads. After this, run `FirstTimeSetup.bat` after you download the release from the Releases tab.
+  - If converting to executables through PyInstaller is done successfully, that means that you don't have to install / download Python or run `FirstTimeSetup.bat`. Check back for updates.
+
+- No Aria2 / wget support. `aria2p` won't run without any `aria2c` server stuffs, so InstallWSA will soon use Python's integrated `requests` for downloading.
+
+#### And hey, there's more good stuffs, too:
+
+- WSAUtilities GUI can be built through Tkinter ~~so I don't have to dig up Stack Overflow on how to use Qt, that might just waste time for my other stuffs~~
+
+- **NO MORE MANUAL LINK GRABBING OR WAITING FOR ME TO UPLOAD THE LATEST VERSION OF WSA ON MY ONEDRIVE!** Latest URLs will be grabbed through store.rg-adguard.net's API, so it will ensure you that you download the latest version from the same servers used on Microsoft Store.
+
+- **Extended and detailed stuffs**, which includes:
+
+  - Show APK info and space used before installation
+  - Less external softwares, more Python integrations
+
+- For devs: Some of the parts of this script (including function to enable Windows features) will soon be available to PyPI, which you can install through any Python package manager.
 
 ### New stuffs
 
