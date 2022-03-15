@@ -33,6 +33,8 @@ After migration completed, all the batch files will be archived and new features
 
 - No Aria2 / wget support. `aria2p` won't run without any `aria2c` server stuffs, so InstallWSA will soon use Python's integrated `requests` for downloading.
 
+- No multilanguage support. 
+
 #### And hey, there's more good stuffs, too:
 
 - WSAUtilities GUI can be built through Tkinter ~~so I don't have to dig up Stack Overflow on how to use Qt, that might just waste time for my other stuffs~~
