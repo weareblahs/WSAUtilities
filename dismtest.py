@@ -1,6 +1,14 @@
 import UAC
-import winfeatures
 import os
+import sys
+import win32com.shell.shell as shell
+ASADMIN = 'asadmin'
 
-UAC.gainadminaccess()
-winfeatures.install('VirtualMachinePlatform')
+isAdmin = sys.argv[-1] == ASADMIN
+
+if not isAdmin:
+    script = os.path.abspath(sys.argv[0])
+    params = ' '.join([script] + sys.argv[1:] + [ASADMIN])
+    shell.ShellExecuteEx(lpVerb='runas', lpFile=sys.executable, lpParameters=dism)
+print(isAdmin)
+

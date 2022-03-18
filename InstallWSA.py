@@ -8,6 +8,7 @@ import urllib.request
 import pathlib
 from clint.textui import progress
 from hurry.filesize import size
+import subprocess
 
 def searchforlink():
     print('Searching for latest Windows Subsystem for Android package from store.rg-adguard.net...')
@@ -51,4 +52,6 @@ else:
             if chunk:
                 f.write(chunk)
                 f.flush()
-    print("Download complete! Installing...")
+    print("Download complete!")
+print("Installing...")
+subprocess.call("powershell Add-AppxPackage -Path temp\wsa_installation.msixbundle")
