@@ -48,6 +48,27 @@ After migration completed, all the batch files will be archived and new features
 
 - For devs: Some of the parts of this script (including function to enable Windows features) will soon be available to PyPI, which you can install through any Python package manager.
 
+#### WIP list
+##### WIP
+- [x] InstallAPK.bat (Replace to `InstallAPK.py`. Added new features such as file picker and app information)
+- [x] InstallAurora.bat (Replace to `InstallAurora.py`. Downloads latest Aurora Store version using `requests` and install it)
+- [x] InstallMicrosoftLauncher.bat (Replace to `InstallAurora.py`. Still downloads from my OneDrive. For up-to-date ones, upload it to a file hosting service that supports direct download then paste the link on `WSAU.ini`)
+- [ ] InstallWSA.bat
+- [ ] InstallXAPK.bat
+- [ ] WSAUDiag.bat
+- [x] WSAUtilities.bat (Replace to `CliLauncher.py`)
+- [x] WSAUtilities.ini (Replace to `WSAU.ini` and `WSAU_user.ini`)
+
+##### Removed
+- Screenshot.bat (Screenshot no longer work in WSA unless capture window. Will do an alternative of this soon)
+- ScreenshotDT.bat (Screenshot no longer work in WSA unless capture window. Will do an alternative of this soon)
+- LocalVariables.bat (Python-based INI system is used for this case)
+- InstallWSAMirror.bat (Links are grabbed from store.rg-adguard.net and in this case, it will be downloaded from Microsoft's servers)
+- PostInstallXAPK.bat (Included in InstallXAPK)
+- EnableVMP.bat (Done on same script)
+- OfflineInstallWSA_pack (To install offline copy predownloaded WSA bundle to the `temp` folder then rename it to `WSA.msixbundle`)
+- InstallWSAGUI (Not planning to do GUI for InstallWSA)
+- WSAUtilitiesLauncher.bat (System checks can be done on `DeviceCheck.py`)
 ### New stuffs
 
 - One-click installer for InstallWSAMirror through IExpress
