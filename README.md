@@ -53,7 +53,7 @@ After migration completed, all the batch files will be archived and new features
 - [x] InstallAPK.bat (Replace to `InstallAPK.py`. Added new features such as file picker and app information)
 - [x] InstallAurora.bat (Replace to `InstallAurora.py`. Downloads latest Aurora Store version using `requests` and install it)
 - [x] InstallMicrosoftLauncher.bat (Replace to `InstallAurora.py`. Still downloads from my OneDrive. For up-to-date ones, upload it to a file hosting service that supports direct download then paste the link on `WSAU.ini`)
-- [ ] InstallWSA.bat
+- [X] InstallWSA.bat (Replace to `InstallWSA.py`. New functions are written for this script, including `winfeatures`.)
 - [ ] InstallXAPK.bat
 - [ ] WSAUDiag.bat
 - [x] WSAUtilities.bat (Replace to `CliLauncher.py`)
