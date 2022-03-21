@@ -9,6 +9,39 @@ import pathlib
 from clint.textui import progress
 from hurry.filesize import size
 import subprocess
+import sys
+import ctypes
+import winfeatures
+
+def run_as_admin(argv=None, debug=False):
+    shell32 = ctypes.windll.shell32
+    if argv is None and shell32.IsUserAnAdmin():
+        return True
+        
+    if argv is None:
+        argv = sys.argv
+    if hasattr(sys, '_MEIPASS'):
+        arguments = map(str, argv[1:])
+    else:
+        arguments = map(str, argv)
+    argument_line = u' '.join(arguments)
+    executable = str(sys.executable)
+    if debug:
+        print ('Command line: '), executable, argument_line
+    ret = shell32.ShellExecuteW(None, u"runas", executable, argument_line, None, 1)
+    if int(ret) <= 32:
+        return False
+    return None
+
+if __name__ == '__main__':
+    ret = run_as_admin()
+
+if ret is True:
+        print('InstallWSA is running with elevated permissions.')
+elif ret is None:
+        print ('InstallWSA will be launching on a new window with administrator rights.')
+        input('Press ENTER to exit this window.')
+        exit()
 
 def searchforlink():
     print('Searching for latest Windows Subsystem for Android package from store.rg-adguard.net...')
@@ -54,4 +87,19 @@ else:
                 f.flush()
     print("Download complete!")
 print("Installing...")
-subprocess.call("powershell Add-AppxPackage -Path temp\wsa_installation.msixbundle")
+os.system('powershell Add-AppxPackage -Path temp\WSA.msixbundle')
+print('Enabling Virtual Machine Platform. This is required to use Windows Subsystem for Android.')
+winfeatures.install('VirtualMachinePlatform')
+os.system('cls')
+print('Installation complete!')
+print('Windows Subsystem for Android requires a restart of your computer in order to make it working.')
+print('Do you want to restart?')
+print('Y: Yes')
+print('N: No')
+selection = input("Please choose your selection and press ENTER: ")
+if selection == "Y":
+    os.system('shutdown /r /t 0 /d WSAUtilities Restart')
+elif selection == "y":
+    os.system('shutdown /r /t 0 /d WSAUtilities Restart')
+else:
+    exit()

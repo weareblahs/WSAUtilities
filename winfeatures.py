@@ -1,6 +1,6 @@
 def install(feature):
     packageName = feature
-    featurecommand = "dism /online /Enable-Feature /FeatureName:" + packageName + "/All"
+    featurecommand = "dism /online /Enable-Feature /FeatureName:" + packageName + " /All"
     import os
     os.system(featurecommand)
     return featurecommand
