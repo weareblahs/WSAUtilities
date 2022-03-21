@@ -1,1 +1,2 @@
 /temp/*.apk # Exclude downloaded APK files during test
+/temp/WSA.msixbundle # Made before the commit of that rewrite of InstallWSA.py
