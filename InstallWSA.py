@@ -12,6 +12,10 @@ import subprocess
 import sys
 import ctypes
 import winfeatures
+import six
+import packaging
+import packaging.version
+import packaging.specifiers
 
 def run_as_admin(argv=None, debug=False):
     shell32 = ctypes.windll.shell32
