@@ -12,7 +12,7 @@ os.system('cls')
 print('Select the APK file from the popup. After selecting, it will start the install process.')
 
 tk = Tk()
-tk.filename = filedialog.askopenfilename(initialdir = "/",title = "Select APK file",filetypes = (("Android App","*.apk"),("all files","*.*")))
+tk.filename = filedialog.askopenfilename(initialdir = "/",title = "Select APK file",filetypes = (("Android Application","*.apk"),("all files","*.*")))
 
 filename = str(tk.filename)
 app = APK(filename)
