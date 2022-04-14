@@ -37,7 +37,9 @@ else:
     print('platform-tools downloaded! Proceeding to InstallXAPK...')
 # platform-tools downloading dialog end
 
-print('Starting Windows Subsystem for Android before installation...')
+startwsaml = """Starting Windows Subsystem for Android before installation...
+Stuck at this step? Close this window and open again."""
+print(startwsaml)
 os.system('WsaClient.exe /start') 
 os.system('cls')
 print('Select the APK file from the popup. After selecting, it will start the install process.')
@@ -48,8 +50,12 @@ tk.filename = filedialog.askopenfilename(initialdir = "/",title = "Select XAPK f
 filename = str(tk.filename)
 with zipfile.ZipFile(filename, 'r') as zip_ref:
      zip_ref.extractall("xapktemp")
-
-app = APK(filepath)
+     
+preextractfilepath = str(os.listdir("xapktemp")[0])
+print(preextractfilepath)
+os.system("pause")
+preextractcompat = "xapktemp/" + preextractfilepath
+app = APK(preextractcompat)
 print ("Parsing app information...")
 appname = str(app.application)
 packagename = str(app.package)
@@ -63,8 +69,12 @@ selection = input("Please choose your selection and press ENTER: ")
 
 if selection == "Y":
     print('Installation process started.')
+if selection == "y":
+    print('Installation process started.')
 if selection == "N":
-        exec(open("InstallAPK.py").read())
+        exec(open("CliLauncher.py").read())
+if selection == "n":
+        exec(open("CliLauncher.py").read())
 
 print('Connecting WSA machine through ADB...')
 conadb.main()
