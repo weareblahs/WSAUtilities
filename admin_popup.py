@@ -23,13 +23,3 @@ def run_as_admin(argv=None, debug=False):
     return None
     
 
-if __name__ == '__main__':
-    ret = run_as_admin()
-    if ret is True:
-        print ('I have admin privilege.')
-        input('Press ENTER to exit.')
-    elif ret is None:
-        print ('I am elevating to admin privilege.')
-        input('Press ENTER to exit.')
-    else:
-        print ('Error(ret=%d): cannot elevate privilege.' % (ret, ))

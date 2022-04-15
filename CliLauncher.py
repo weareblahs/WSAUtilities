@@ -1,6 +1,7 @@
 import configparser
 import keyboard
 import time
+import os
 
 config = configparser.ConfigParser()
 configL = configparser.RawConfigParser()
@@ -12,9 +13,6 @@ ver = config['VersionInfo']['Version']
 
 config.read('WSAU_user.ini')
 version_comp = config['System']['supported']
-sel5 = "A1"
-sel6 = "A2"
-sel7 = "M"
 
 if(version_comp == "true"):
     print('')
@@ -55,20 +53,20 @@ elif selection=="3":
 elif selection=="4":
     exec(open("InstallXAPK.py").read())
 
-elif selection==sel5.lower():
+elif selection=="A1":
     exec(open("InstallAurora.py").read())
 
-elif selection==sel5:
+elif selection=="a1":
     exec(open("InstallAurora.py").read())
 
-elif selection==sel6.lower():
+elif selection=="A2":
     exec(open("InstallMicrosoftLauncher.py").read())
 
-elif selection==sel6:
+elif selection=="a2":
     exec(open("InstallMicrosoftLauncher.py").read())
     
-elif selection==sel7.lower():
-    exec(open("DiagMenu.py").read())
+elif selection=="m1":
+    exec(open("Diagnostics.py").read())
 
-elif selection==sel7:
-    exec(open("DiagMenu.py").read())
+elif selection=="M1":
+    exec(open("Diagnostics.py").read())
