@@ -8,6 +8,7 @@ from pyaxmlparser import APK
 import time
 import urllib
 import zipfile
+import glob
 
 adbpath = "winadb\platform-tools\adb.exe"
 
@@ -50,10 +51,8 @@ tk.filename = filedialog.askopenfilename(initialdir = "/",title = "Select XAPK f
 filename = str(tk.filename)
 with zipfile.ZipFile(filename, 'r') as zip_ref:
      zip_ref.extractall("xapktemp")
-     
 preextractfilepath = str(os.listdir("xapktemp")[0])
-print(preextractfilepath)
-os.system("pause")
+files = str(' '.join(glob.glob('xapktemp/*.apk')))
 preextractcompat = "xapktemp/" + preextractfilepath
 app = APK(preextractcompat)
 print ("Parsing app information...")
@@ -83,7 +82,7 @@ client = AdbClient(host="127.0.0.1", port=5037)
 devices = client.devices()
 
 # ADB client for installation usage (platform-tools)
-os.system('winadb\platform-tools\adb connect localhost:58526')
+os.system("winadb\platform-tools\adb connect localhost:58526")
 
 for device in devices:
     FirstCheck = str(device.is_installed(app.package))
@@ -91,8 +90,8 @@ if FirstCheck == "False":
     print("Installing " + app.application + " (" + app.version_name + ")...")
 elif FirstCheck == "True":
     print("Updating " + app.application + " to version " + app.version_name + "...")
-for device in devices:
-    device.install(filename)
+# Start installing bundle
+os.system("adb install-multiple " + files)
 for device in devices:
     FinalCheck = str(device.is_installed(app.package))
 if FinalCheck == "True":
