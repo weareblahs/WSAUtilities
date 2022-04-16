@@ -1,7 +1,9 @@
 import configparser
 import os
 
+
 config = configparser.ConfigParser()
+config.read('WSAU.ini')
 name = config['VersionInfo']['ProductName']
 
 print(f'{name} diagnostics menu')

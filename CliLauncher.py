@@ -33,6 +33,8 @@ print(
     [A2]: Install Microsoft Launcher
 
     [M]: Diagnostics
+
+    [Q]: Exit WSAUtilities
     '''
 )
 print('')
@@ -65,8 +67,14 @@ elif selection=="A2":
 elif selection=="a2":
     exec(open("InstallMicrosoftLauncher.py").read())
     
-elif selection=="m1":
+elif selection=="M":
+    exec(open("m1.py").read())
+
+elif selection=="m":
     exec(open("Diagnostics.py").read())
 
-elif selection=="M1":
-    exec(open("Diagnostics.py").read())
+elif selection=="Q":
+    quit()
+
+elif selection=="q":
+    quit()
