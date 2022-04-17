@@ -14,6 +14,8 @@ ver = config['VersionInfo']['Version']
 config.read('WSAU_user.ini')
 version_comp = config['System']['supported']
 
+os.system('cls')
+
 if(version_comp == "true"):
     print('')
 else:
@@ -40,9 +42,11 @@ print('')
 selection = input("Please choose your selection and press ENTER: ")
 
 if selection=="0":
+    os.system('cls')
     exec(open("DeviceCheck.py").read())
 
 elif selection=="1":
+    os.system('cls')
     exec(open("InstallWSA.py").read())
 
 elif selection=="2":
@@ -58,15 +62,19 @@ elif selection=="a1":
     exec(open("InstallAurora.py").read())
 
 elif selection=="A2":
+    os.system('cls')
     exec(open("InstallMicrosoftLauncher.py").read())
 
 elif selection=="a2":
+    os.system('cls')
     exec(open("InstallMicrosoftLauncher.py").read())
     
 elif selection=="M":
-    exec(open("m1.py").read())
+    os.system('cls')
+    exec(open("Diagnostics.py").read())
 
 elif selection=="m":
+    os.system('cls')
     exec(open("Diagnostics.py").read())
 
 elif selection=="Q":
