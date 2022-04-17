@@ -24,9 +24,8 @@ print('')
 print(
     '''
     [1]: Install Windows Subsystem for Android [InstallWSA]
-    [2]: Install Windows Subsystem for Android [InstallWSAMirror]
-    [3]: Install APK on Windows Subsystem for Android [InstallAPK]
-    [4]: Install XAPK files downloaded from APKPure [InstallXAPK]
+    [2]: Install APK on Windows Subsystem for Android [InstallAPK]
+    [3]: Install XAPK files downloaded from APKPure [InstallXAPK]
 
     Additional options:
     [A1]: Install Aurora Store
@@ -47,12 +46,9 @@ elif selection=="1":
     exec(open("InstallWSA.py").read())
 
 elif selection=="2":
-    exec(open("InstallWSAMirror.py").read())
-
-elif selection=="3":
     exec(open("InstallAPK.py").read())
 
-elif selection=="4":
+elif selection=="3":
     exec(open("InstallXAPK.py").read())
 
 elif selection=="A1":
