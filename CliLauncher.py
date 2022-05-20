@@ -2,6 +2,7 @@ import configparser
 import keyboard
 import time
 import os
+import webbrowser
 
 config = configparser.ConfigParser()
 configL = configparser.RawConfigParser()
@@ -47,7 +48,19 @@ if selection=="0":
 
 elif selection=="1":
     os.system('cls')
-    exec(open("InstallWSA.py").read())
+    print(
+        '''
+        Please select where you want to download Windows Subsystem for Android:
+        [1]: Install through Windows Store (Recommended for highly technical users)
+        [2]: Download and Install through this script
+        '''
+    )
+    installwsasel = input("Please choose your selection and press ENTER: ")
+    if installwsasel=="1":
+        print('Opening in browser...')
+        webbrowser.open('https://apps.microsoft.com/store/detail/windows-subsystem-for-android%E2%84%A2-with-amazon-appstore/9P3395VX91NR')
+    elif installwsasel=="2":
+        exec(open("InstallWSA.py").read())
 
 elif selection=="2":
     exec(open("InstallAPK.py").read())
