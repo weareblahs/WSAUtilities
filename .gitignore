@@ -11,3 +11,5 @@
 /winadb/*
 # Exclude platform-tools temp file
 platform-tools_temp.zip
+# Exclude pre-release temp folder
+/releasefiles_root/*
